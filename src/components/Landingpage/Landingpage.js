@@ -44,56 +44,75 @@ const Landingpage = () => {
         </div>
       </div>
       <div id="homeThirdSection" className="container-fluid">
-        {/* <h1>Top Classes</h1>
-        <p>
-          Your professional development has just gotten easier, affordable and
-          exciting with our online courses. They are designed to <br /> equid
-          you with 21st century teaching and learning skills
-        </p> */}
         <div className="row">
-          <div className="col-md-3">
-            <img src={require("../../assets/images/img4.jpg")} alt="" />
-            <span>300 students</span>
-            <span>1hr 40min</span>
-            <p>
-              Serve your breakfast like a boss <br /> and have a diet on
-            </p>
-            <p>Chef Michael Akpan</p>
-            <img src={require("../../assets/images/img8.png")} alt="" />
-            <span> 4.5 </span>
-          </div>
-          <div className="col-md-3">
-            <img src={require("../../assets/images/img4.jpg")} alt="" />
-            <span>300 students</span>
-            <span>1hr 40min</span>
-            <p>
-              Serve your breakfast like a boss <br /> and have a diet on
-            </p>
-            <p>Chef Michael Akpan</p>
-            <img src={require("../../assets/images/img8.png")} alt="" />
-            <span> 4.5 </span>
-          </div>
-          <div className="col-md-3">
-            <img src={require("../../assets/images/img4.jpg")} alt="" />
-            <span>300 students</span>
-            <span>1hr 40min</span>
-            <p>
-              Serve your breakfast like a boss <br /> and have a diet on
-            </p>
-            <p>Chef Michael Akpan</p>
-            <img src={require("../../assets/images/img8.png")} alt="" />
-            <span> 4.5 </span>
-          </div>
-          <div className="col-md-3">
-            <img src={require("../../assets/images/img4.jpg")} alt="" />
-            <span>300 students</span>
-            <span>1hr 40min</span>
-            <p>
-              Serve your breakfast like a boss <br /> and have a diet on
-            </p>
-            <p>Chef Michael Akpan</p>
-            <img src={require("../../assets/images/img8.png")} alt="" />
-            <span> 4.5 </span>
+          <div className="col-md-12">
+            <div className="row row-1">
+              <div className="col-md-12">
+                <div>
+                  <h1>Top Classes</h1>
+                  <p>
+                    Your professional development has just gotten easier,
+                    affordable and exciting with our online courses. They are
+                    designed to <br /> equid you with 21st century teaching and
+                    learning skills
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="row row-2">
+              <div className="col-md-2">
+                <img src={require("../../assets/images/img4.jpg")} alt="" />
+                <div>
+                  <span>300 students</span>
+                  <span>1hr 40min</span>
+                </div>
+                <p>
+                  Serve your breakfast like a boss <br /> and have a diet on
+                </p>
+                <p>Chef Michael Akpan</p>
+                <img src={require("../../assets/images/img8.png")} alt="" />
+                <span> 4.5 </span>
+              </div>
+              <div className="col-md-2">
+                <img src={require("../../assets/images/img4.jpg")} alt="" />
+                <div>
+                  <span>300 students</span>
+                  <span>1hr 40min</span>
+                </div>
+                <p>
+                  Serve your breakfast like a boss <br /> and have a diet on
+                </p>
+                <p>Chef Michael Akpan</p>
+                <img src={require("../../assets/images/img8.png")} alt="" />
+                <span> 4.5 </span>
+              </div>
+              <div className="col-md-2">
+                <img src={require("../../assets/images/img4.jpg")} alt="" />
+                <div>
+                  <span>300 students</span>
+                  <span>1hr 40min</span>
+                </div>
+                <p>
+                  Serve your breakfast like a boss <br /> and have a diet on
+                </p>
+                <p>Chef Michael Akpan</p>
+                <img src={require("../../assets/images/img8.png")} alt="" />
+                <span> 4.5 </span>
+              </div>
+              <div className="col-md-2">
+                <img src={require("../../assets/images/img4.jpg")} alt="" />
+                <div>
+                  <span>300 students</span>
+                  <span>1hr 40min</span>
+                </div>
+                <p>
+                  Serve your breakfast like a boss <br /> and have a diet on
+                </p>
+                <p>Chef Michael Akpan</p>
+                <img src={require("../../assets/images/img8.png")} alt="" />
+                <span> 4.5 </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
