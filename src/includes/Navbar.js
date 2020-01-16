@@ -45,7 +45,7 @@ const Navbar = () => {
           </ul>
           <ul className="navbar-nav mt-2 mt-lg-0 signup">
             <li className="nav-item active">
-              <Link className="nav-link" to="#">
+              <Link className="nav-link signup" to="#">
                 Sign In
               </Link>
             </li>
