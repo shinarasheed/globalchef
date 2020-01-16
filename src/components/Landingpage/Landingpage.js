@@ -9,7 +9,7 @@ const Landingpage = () => {
           <div className="col-md-12">
             <p>Cooking is fun! We will prove it to you</p>
             <h3>
-              Get Unlimited access tio the <br /> world of food
+              Get Unlimited access to the <br /> world of food
             </h3>
             <Link to="cooking">Get Started</Link>
           </div>
@@ -44,7 +44,7 @@ const Landingpage = () => {
         </div>
       </div>
       <div id="homeThirdSection" className="container-fluid">
-        <div className="row">
+        <div className="row parent_row">
           <div className="col-md-12">
             <div className="row row-1">
               <div className="col-md-12">
@@ -61,7 +61,11 @@ const Landingpage = () => {
             </div>
             <div className="row row-2">
               <div className="col-md-2">
-                <img src={require("../../assets/images/img4.jpg")} alt="" />
+                <img
+                  src={require("../../assets/images/img4.jpg")}
+                  alt=""
+                  className="food_image"
+                />
                 <div>
                   <span>300 students</span>
                   <span>1hr 40min</span>
@@ -70,11 +74,17 @@ const Landingpage = () => {
                   Serve your breakfast like a boss <br /> and have a diet on
                 </p>
                 <p>Chef Michael Akpan</p>
-                <img src={require("../../assets/images/img8.png")} alt="" />
-                <span> 4.5 </span>
+                <p className="rating">
+                  <img src={require("../../assets/images/img8.png")} alt="" />
+                  <span> 4.5 </span>
+                </p>
               </div>
               <div className="col-md-2">
-                <img src={require("../../assets/images/img4.jpg")} alt="" />
+                <img
+                  src={require("../../assets/images/img5.png")}
+                  alt=""
+                  className="food_image"
+                />
                 <div>
                   <span>300 students</span>
                   <span>1hr 40min</span>
@@ -83,11 +93,17 @@ const Landingpage = () => {
                   Serve your breakfast like a boss <br /> and have a diet on
                 </p>
                 <p>Chef Michael Akpan</p>
-                <img src={require("../../assets/images/img8.png")} alt="" />
-                <span> 4.5 </span>
+                <p className="rating">
+                  <img src={require("../../assets/images/img8.png")} alt="" />
+                  <span> 4.5 </span>
+                </p>
               </div>
               <div className="col-md-2">
-                <img src={require("../../assets/images/img4.jpg")} alt="" />
+                <img
+                  src={require("../../assets/images/img6.png")}
+                  alt=""
+                  className="food_image"
+                />
                 <div>
                   <span>300 students</span>
                   <span>1hr 40min</span>
@@ -96,11 +112,17 @@ const Landingpage = () => {
                   Serve your breakfast like a boss <br /> and have a diet on
                 </p>
                 <p>Chef Michael Akpan</p>
-                <img src={require("../../assets/images/img8.png")} alt="" />
-                <span> 4.5 </span>
+                <p className="rating">
+                  <img src={require("../../assets/images/img8.png")} alt="" />
+                  <span> 4.5 </span>
+                </p>
               </div>
               <div className="col-md-2">
-                <img src={require("../../assets/images/img4.jpg")} alt="" />
+                <img
+                  src={require("../../assets/images/img7.jpg")}
+                  alt=""
+                  className="food_image"
+                />
                 <div>
                   <span>300 students</span>
                   <span>1hr 40min</span>
@@ -109,11 +131,19 @@ const Landingpage = () => {
                   Serve your breakfast like a boss <br /> and have a diet on
                 </p>
                 <p>Chef Michael Akpan</p>
-                <img src={require("../../assets/images/img8.png")} alt="" />
-                <span> 4.5 </span>
+                <p className="rating">
+                  <img src={require("../../assets/images/img8.png")} alt="" />
+                  <span> 4.5 </span>
+                </p>
               </div>
             </div>
+            <Link to="classes">Explore all Classes</Link>
           </div>
+        </div>
+      </div>
+      <div id="homeFourthSection" className="container-fluidd">
+        <div className="row">
+          <div className="col-md-12"></div>
         </div>
       </div>
     </>
