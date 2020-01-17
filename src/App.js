@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Landingpage from "./components/Landingpage/Landingpage";
 import Navbar from "./includes/Navbar";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Landingpage} />
         </Switch>
+        <Footer />
       </Router>
     </>
   );
