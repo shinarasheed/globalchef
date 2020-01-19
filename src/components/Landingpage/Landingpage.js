@@ -92,7 +92,7 @@ const Landingpage = () => {
                 <p>
                   Serve your breakfast like a boss <br /> and have a diet on
                 </p>
-                <p>Chef Michael Akpan</p>
+                <p>Chef Manchang Wuyeng</p>
                 <p className="rating">
                   <img src={require("../../assets/images/img8.png")} alt="" />
                   <span> 4.5 </span>
@@ -111,10 +111,10 @@ const Landingpage = () => {
                 <p>
                   Serve your breakfast like a boss <br /> and have a diet on
                 </p>
-                <p>Chef Michael Akpan</p>
+                <p>Chef Kola Ajisegiri</p>
                 <p className="rating">
-                  <img src={require("../../assets/images/img8.png")} alt="" />
-                  <span> 4.5 </span>
+                  <img src={require("../../assets/images/img11.png")} alt="" />
+                  <span> 5.0 </span>
                 </p>
               </div>
               <div className="col-md-2">
@@ -132,8 +132,8 @@ const Landingpage = () => {
                 </p>
                 <p>Chef Michael Akpan</p>
                 <p className="rating">
-                  <img src={require("../../assets/images/img8.png")} alt="" />
-                  <span> 4.5 </span>
+                  <img src={require("../../assets/images/img10.png")} alt="" />
+                  <span> 4.0 </span>
                 </p>
               </div>
             </div>
@@ -141,9 +141,282 @@ const Landingpage = () => {
           </div>
         </div>
       </div>
-      <div id="homeFourthSection" className="container-fluidd">
+      <div id="homeFourthSection" className="container-fluid">
+        <div id="homeFourthSection_overlay"></div>
         <div className="row">
-          <div className="col-md-12"></div>
+          <div className="col-md-6">
+            <h1>Thoughts About Our Work</h1>
+            <div className="row">
+              <div className="col-md-4">
+                <img
+                  src={require("../../assets/images/testimonyimg.png")}
+                  alt=""
+                />
+              </div>
+              <div className="col-md-8">
+                <p>
+                  I thought about the times in my life when I coundn't even
+                  afford $5 <br />
+                  for a book.That's when it hit me. Wouldn't it be cool if the
+                  price tag <br />
+                  said, 5 jumping jacks and sit-up. Chris raised $70k to help
+                  his <br /> neighbour Norma stay in her home.
+                </p>
+                <p>Angie Roy Barman</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="homeFifthSection" className="container-fluid">
+        <div className="row parent_row">
+          <div className="col-md-12">
+            <div className="row">
+              <div className="col-md-6">
+                <h1>Our Tutors</h1>
+                <p>
+                  We provide world class chefs to take classes as well as guide
+                  learners on their <br /> journey through the world of food.
+                  Our Tutors are fully certified chefs
+                </p>
+              </div>
+            </div>
+            <div className="row row_1">
+              {/* abstract */}
+              <div className="col-md-2">
+                <img
+                  src={require("../../assets/images/chef1.png")}
+                  alt=""
+                  className="chef"
+                />
+                <p>Birgit Schreiner</p>
+                <span>China</span>
+                <ul>
+                  <li>
+                    <Link to="chefs">
+                      <img
+                        src={require("../../assets/images/social1.png")}
+                        alt=""
+                      />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="chefs">
+                      <img
+                        src={require("../../assets/images/social2.png")}
+                        alt=""
+                      />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="chefs">
+                      <img
+                        src={require("../../assets/images/social3.png")}
+                        alt=""
+                      />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="chefs">
+                      <img
+                        src={require("../../assets/images/social4.png")}
+                        alt=""
+                      />
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="col-md-2">
+                <img
+                  src={require("../../assets/images/chef2.png")}
+                  alt=""
+                  className="chef"
+                />
+                <p>Bernd Frey</p>
+                <span>France</span>
+                <ul>
+                  <li>
+                    <Link to="chefs">
+                      <img
+                        src={require("../../assets/images/social1.png")}
+                        alt=""
+                      />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="chefs">
+                      <img
+                        src={require("../../assets/images/social2.png")}
+                        alt=""
+                      />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="chefs">
+                      <img
+                        src={require("../../assets/images/social3.png")}
+                        alt=""
+                      />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="chefs">
+                      <img
+                        src={require("../../assets/images/social4.png")}
+                        alt=""
+                      />
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="col-md-2">
+                <img
+                  src={require("../../assets/images/chef3.png")}
+                  alt=""
+                  className="chef"
+                />
+                <p>Muyiwa Akintola</p>
+                <span>Nigeria</span>
+                <ul>
+                  <li>
+                    <Link to="chefs">
+                      <img
+                        src={require("../../assets/images/social1.png")}
+                        alt=""
+                      />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="chefs">
+                      <img
+                        src={require("../../assets/images/social2.png")}
+                        alt=""
+                      />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="chefs">
+                      <img
+                        src={require("../../assets/images/social3.png")}
+                        alt=""
+                      />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="chefs">
+                      <img
+                        src={require("../../assets/images/social4.png")}
+                        alt=""
+                      />
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="col-md-2">
+                <img
+                  src={require("../../assets/images/chef4.png")}
+                  alt=""
+                  className="chef"
+                />
+                <p>Jacob Zuma</p>
+                <span>South Africa</span>
+                <ul>
+                  <li>
+                    <Link to="chefs">
+                      <img
+                        src={require("../../assets/images/social1.png")}
+                        alt=""
+                      />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="chefs">
+                      <img
+                        src={require("../../assets/images/social2.png")}
+                        alt=""
+                      />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="chefs">
+                      <img
+                        src={require("../../assets/images/social3.png")}
+                        alt=""
+                      />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="chefs">
+                      <img
+                        src={require("../../assets/images/social4.png")}
+                        alt=""
+                      />
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="homeSixthSection" className="container-fluid">
+        <div className="row parent_row">
+          <div className="col-md-4 form_div">
+            <div className="row">
+              <div className="col-md-6">
+                <p>Get In Touch</p>
+                <h4>Contact Us</h4>
+              </div>
+            </div>
+            <form>
+              <div className="row row_2">
+                <div className="col-md-6">
+                  <input type="text" placeholder="Phone Number" />
+                  <img src={require("../../assets/images/number.png")} alt="" />
+                </div>
+                <div className="col-md-6">
+                  <input type="text" placeholder="Email" />
+                  <img src={require("../../assets/images/mail.png")} alt="" />
+                </div>
+              </div>
+              <div className="row row_2">
+                <div className="col-md-6">
+                  <input type="text" placeholder="Full Name" />
+                  <img src={require("../../assets/images/name.png")} alt="" />
+                </div>
+                <div className="col-md-6">
+                  <input type="text" placeholder="Topic" />
+                  <img src={require("../../assets/images/topic.png")} alt="" />
+                </div>
+              </div>
+              <div className="row ">
+                <div className="col-md-12 row_2">
+                  <textarea cols="30" rows="3">
+                    Message
+                  </textarea>
+                  <img
+                    src={require("../../assets/images/message.png")}
+                    alt=""
+                  />
+                </div>
+              </div>
+              <button type="submit">Send</button>
+            </form>
+          </div>
+          <div className="col-md-6 image_div">
+            <img
+              src={require("../../assets/images/contactimg.png")}
+              alt=""
+              className="contact_image"
+            />
+            <div>
+              <p>
+                Cooking is an <br /> art.Learn, gather <br /> and create the
+                <br /> masterpiece
+              </p>
+              <span>Helen Kell</span>
+            </div>
+          </div>
         </div>
       </div>
     </>
