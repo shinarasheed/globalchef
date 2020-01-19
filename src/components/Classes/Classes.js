@@ -22,16 +22,18 @@ const Classes = () => {
         </div>
         <div className="row row_2">
           <div className="col-md-12">
+            <div id="row_2_overlay"></div>
+
             <img
               src={require("../../assets/images/cookingvideo_small.png")}
               alt=""
             />
-            <div>
+            {/* <div>
               <Link to="about">About</Link>
               <Link to="about">Resources</Link>
               <Link to="about">Reviews</Link>
             </div>
-            <hr />
+            <hr /> */}
           </div>
         </div>
       </div>
