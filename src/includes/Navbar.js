@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <Link className="nav-brand" to="#">
+        <Link className="nav-brand" to="/">
           <img src={require("../assets/images/logo.png")} alt="" />
         </Link>
         <button
@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul className="navbar-nav  mt-2 mt-lg-0 links">
             <li className="nav-item active">
-              <Link className="nav-link" to="#">
+              <Link className="nav-link" to="/">
                 Home
               </Link>
             </li>
@@ -33,7 +33,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="classess">
+              <Link className="nav-link" to="/classes">
                 Classes
               </Link>
             </li>

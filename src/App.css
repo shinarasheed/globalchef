@@ -45,8 +45,7 @@ nav ul li a.signup:hover {
   font-weight: 600 !important;
 }
 
-.nav-link:hover,
-.nav-link:active {
+.nav-link:hover, .nav-link:active {
   color: yellow !important;
 }
 
@@ -101,7 +100,7 @@ nav ul li a.signup:hover {
   font-weight: bold;
 }
 
-#homeSecondSection > .row {
+#homeSecondSection>.row {
   justify-content: center;
 }
 
@@ -109,8 +108,7 @@ nav ul li a.signup:hover {
   text-align: center;
 }
 
-#homeSecondSection .col-md-3:nth-child(2),
-#homeSecondSection .col-md-3:nth-child(3) {
+#homeSecondSection .col-md-3:nth-child(2), #homeSecondSection .col-md-3:nth-child(3) {
   border-left: 1px solid #ddd;
 }
 
@@ -207,12 +205,12 @@ nav ul li a.signup:hover {
   position: relative;
 }
 
-#homeFourthSection > .row {
+#homeFourthSection>.row {
   justify-content: center;
   height: 100%;
 }
 
-#homeFourthSection > .row .col-md-6 {
+#homeFourthSection>.row .col-md-6 {
   padding-top: 40px;
 }
 
@@ -318,7 +316,7 @@ nav ul li a.signup:hover {
   padding: 50px 0px 180px 0px;
 }
 
-#homeFifthSection > .row .col-md-6 {
+#homeFifthSection>.row .col-md-6 {
   margin-left: 247px;
 }
 
@@ -335,7 +333,7 @@ nav ul li a.signup:hover {
   height: 580px;
 }
 
-#homeSixthSection > .row.parent_row {
+#homeSixthSection>.row.parent_row {
   justify-content: center;
 }
 
@@ -384,7 +382,7 @@ nav ul li a.signup:hover {
   margin-bottom: 0;
 }
 
-#homeSixthSection > .row.parent_row {
+#homeSixthSection>.row.parent_row {
   justify-content: flex-end;
 }
 
@@ -460,9 +458,7 @@ nav ul li a.signup:hover {
   display: inline;
 }
 
-#footerFirstSection ul.social li:nth-child(2) a,
-#footerFirstSection ul.social li:nth-child(3) a,
-#footerFirstSection ul.social li:nth-child(4) a {
+#footerFirstSection ul.social li:nth-child(2) a, #footerFirstSection ul.social li:nth-child(3) a, #footerFirstSection ul.social li:nth-child(4) a {
   padding-left: 20px;
   text-decoration: none;
 }
@@ -500,18 +496,18 @@ nav ul li a.signup:hover {
   font-weight: bold;
 }
 
-#footerFirstSection > .row {
+#footerFirstSection>.row {
   justify-content: center;
   padding: 80px 20px;
 }
 
-#footerFirstSection > .row .col-md-4:nth-child(2) {
+#footerFirstSection>.row .col-md-4:nth-child(2) {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#footerFirstSection > .row .col-md-4:nth-child(2) h2 {
+#footerFirstSection>.row .col-md-4:nth-child(2) h2 {
   padding-right: 215px;
   font-size: 17px;
   font-weight: bold;
@@ -522,7 +518,7 @@ nav ul li a.signup:hover {
   justify-content: flex-end;
 }
 
-#footerFirstSection > .row::after {
+#footerFirstSection>.row::after {
   content: "";
   display: block;
   width: 940px;
@@ -548,7 +544,7 @@ nav ul li a.signup:hover {
   font-size: 14px;
 }
 
-#footerSecondSection > .row {
+#footerSecondSection>.row {
   justify-content: center;
 }
 
@@ -597,4 +593,146 @@ nav ul li a.signup:hover {
   border-bottom-right-radius: 5px;
   background-color: #fff;
   font-weight: 100;
+}
+
+#contactFirstSection>.row.row_1 {
+  padding: 20px 125px 10px 125px;
+}
+
+#contactFirstSection>.row.row_1 .col-md-12 {
+  padding-left: 0;
+}
+
+#contactFirstSection .col-md-12 div {
+  display: flex;
+}
+
+#contactFirstSection .col-md-12 div p span {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: 600;
+}
+
+#contactFirstSection h4 {
+  font-weight: bold;
+}
+
+#contactFirstSection .col-md-12 div p {
+  margin-bottom: 0;
+}
+
+#contactFirstSection .row.row_2 .col-md-12 {
+  text-align: center;
+}
+
+#contactFirstSection .row.row_2 .col-md-12 div {
+  padding-left: 180px;
+  padding-top: 40px;
+}
+
+#contactFirstSection .row.row_2 .col-md-12 div a {
+  color: #000;
+  padding-right: 150px;
+  text-decoration: none;
+}
+
+#contactFirstSection .col-md-12 hr {
+  width: 50%;
+  margin-right: 566px;
+  margin-top: 6px;
+}
+
+#contactFirstSection .row.row_2 {
+  padding-bottom: 10px;
+}
+
+#contactSecondSection .col-md-4 h2 {
+  font-size: 22px;
+}
+
+#contactSecondSection .col-md-4.food_image h5 {
+  font-size: 13px;
+  font-weight: bold;
+  padding-bottom: 7px;
+}
+
+#contactSecondSection .col-md-12.about_class {
+  padding-left: 69px;
+}
+
+#contactSecondSection .col-md-12.col-md-12.about_class p {
+  font-size: 15px;
+  line-height: 30px;
+}
+
+#contactSecondSection .col-md-4.tutor_div h5 {
+  text-align: center;
+  font-weight: bold;
+}
+
+#contactSecondSection .col-md-4.tutor_div .col-md-8 p:first-child {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#contactSecondSection .col-md-7 .col-md-12 h4 {
+  font-size: 22px;
+  font-weight: bolder;
+}
+
+#contactSecondSection .col-md-4 p {
+  font-size: 13px;
+}
+
+#contactSecondSection .col-md-4 span {
+  font-size: 13px;
+  display: inline-block;
+  padding-top: 15px;
+}
+
+#contactSecondSection .col-md-4 .row {
+  margin-bottom: 15px;
+}
+
+#contactSecondSection .col-md-4 .row .col-md-6 {
+  text-align: center;
+}
+
+#contactSecondSection .col-md-4 .row .col-md-6:nth-child(2) {
+  text-align: left;
+  padding-right: 12px;
+  margin-right: 0px;
+  margin-left: -25px;
+}
+
+#contactSecondSection .col-md-4.food_image img {
+  width: 170px;
+  height: 170px;
+}
+
+#contactSecondSection .col-md-8 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 32px;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+#contactSecondSection .col-md-8 p:first-child {
+  font-weight: bold;
+}
+
+#contactSecondSection .col-md-8 span {
+  font-weight: bold;
+  display: block;
+  padding-bottom: 10px;
+}
+
+#contactSecondSection .row.row.parent_row {
+  justify-content: center;
+}
+
+#contactSecondSection .row.tutor_row {
+  padding-top: 40px;
 }

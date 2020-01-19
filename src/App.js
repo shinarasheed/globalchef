@@ -14,7 +14,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path="/" component={Landingpage} />
-          <Route exact path="/classes" component={Classes} />
+          <Route path="/classes" component={Classes} />
         </Switch>
         <Footer />
       </Router>
