@@ -44,7 +44,6 @@ nav ul li a.signup:hover {
   color: #fff !important;
   font-weight: 600 !important;
 }
-
 .nav-link:hover, .nav-link:active {
   color: yellow !important;
 }
@@ -107,7 +106,6 @@ nav ul li a.signup:hover {
 #homeSecondSection .col-md-3 {
   text-align: center;
 }
-
 #homeSecondSection .col-md-3:nth-child(2), #homeSecondSection .col-md-3:nth-child(3) {
   border-left: 1px solid #ddd;
 }
@@ -204,12 +202,10 @@ nav ul li a.signup:hover {
   height: 461px;
   position: relative;
 }
-
 #homeFourthSection>.row {
   justify-content: center;
   height: 100%;
 }
-
 #homeFourthSection>.row .col-md-6 {
   padding-top: 40px;
 }
@@ -315,7 +311,6 @@ nav ul li a.signup:hover {
 #homeFifthSection .row.parent_row {
   padding: 50px 0px 180px 0px;
 }
-
 #homeFifthSection>.row .col-md-6 {
   margin-left: 247px;
 }
@@ -332,7 +327,6 @@ nav ul li a.signup:hover {
   width: 630px;
   height: 580px;
 }
-
 #homeSixthSection>.row.parent_row {
   justify-content: center;
 }
@@ -381,7 +375,6 @@ nav ul li a.signup:hover {
 #homeSixthSection p {
   margin-bottom: 0;
 }
-
 #homeSixthSection>.row.parent_row {
   justify-content: flex-end;
 }
@@ -506,7 +499,6 @@ nav ul li a.signup:hover {
   flex-direction: column;
   align-items: center;
 }
-
 #footerFirstSection>.row .col-md-4:nth-child(2) h2 {
   padding-right: 215px;
   font-size: 17px;
