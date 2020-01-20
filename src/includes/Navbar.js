@@ -45,14 +45,14 @@ const Navbar = () => {
           </ul>
           <ul className="navbar-nav mt-2 mt-lg-0 signup">
             <li className="nav-item active">
-              <Link className="nav-link signup" to="#">
+              <Link className="nav-link signup" to="/signin">
                 Sign In
               </Link>
             </li>
             <li className="nav-item active">
               <Link
                 className="nav-link signup"
-                to="#"
+                to="/signup"
                 style={{ marginLeft: "20px" }}
               >
                 Sign Up

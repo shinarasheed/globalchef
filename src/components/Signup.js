@@ -6,47 +6,54 @@ const Signup = () => {
     <>
       <div id="signupFirstSection" className="container-fluid">
         <div className="row">
-          <div className="col-md-5">
-            <div>
-              <h1>Sign Up and start Learning</h1>
+          <div className="col-md-3">
+            <div className="clear">
+              <span>Sign Up and start Learning</span>
               <Link to="chef">x</Link>
             </div>
+            <hr className="full_line" />
+
+            <form>
+              <div className="parent_div">
+                <input type="text" placeholder="Full Name" />
+
+                <input type="text" placeholder="Email Address" />
+
+                <input type="text" placeholder="Phone Number" />
+
+                <input type="text" placeholder="Password" />
+
+                <div className="checkbox">
+                  <input type="checkbox" name="checkbox" />
+                  <p>
+                    Yes, I want to get the most out of GlobalChef by <br />
+                    recieving emails with exclusive deals, personal <br />
+                    recommendations and learning tips
+                  </p>
+                </div>
+                <div>
+                  <button type="submit">Sign Up</button>
+                  <p>
+                    By signing up you agree to our Terms of Use and Privacy
+                    Policy
+                  </p>
+                </div>
+                <h1>or</h1>
+
+                <button type="submit" className="facebook">
+                  Continue with Facebook
+                </button>
+                <button type="submit">Continue with Google</button>
+
+                <div>
+                  <hr />
+                  <h3>
+                    Already have an account?<Link to="/signin"> Login</Link>
+                  </h3>
+                </div>
+              </div>
+            </form>
           </div>
-          <form>
-            <div>
-              <input type="text" placeholder="Full Name" />
-            </div>
-            <div>
-              <input type="text" placeholder="Email Address" />
-            </div>
-            <div>
-              <input type="text" placeholder="Phone Number" />
-            </div>
-            <div>
-              <input type="text" placeholder="Password" />
-            </div>
-            <div>
-              <input type="checkbox" name="checkbox" />
-              <p>
-                Yes, I want to get the most out of GlobalChef by <br />
-                recieving emails with exclusive deals, personal <br />
-                recommendations and learning tips
-              </p>
-            </div>
-            <div>
-              <button type="submit">Sign Up</button>
-              <p>
-                By signing up you agree to our Terms of Use and Privacy Policy
-              </p>
-            </div>
-            <div>
-              <h1>Or</h1>
-              <button type="submit">Continue with Facebook</button>
-            </div>
-            <div>
-              <button type="submit">Continue with Google</button>
-            </div>
-          </form>
         </div>
       </div>
     </>

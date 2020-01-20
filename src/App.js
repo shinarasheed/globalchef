@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Landingpage from "./components/Landingpage/Landingpage";
 import Navbar from "./includes/Navbar";
 import Footer from "./components/Footer/Footer";
+import Signup from "./components/Signup";
+import Signin from "./components/Signin";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path="/" component={Landingpage} />
+          <Route exact path="/signup" component={Signup} />
+          <Route exact path="/signin" component={Signin} />
         </Switch>
         <Footer />
       </Router>
