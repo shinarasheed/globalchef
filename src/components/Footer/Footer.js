@@ -9,7 +9,8 @@ const Footer = () => {
           <div className="row">
             <div className="col-md-4">
               <h1>
-                Global<span>Chef</span>
+                <span>Global</span>
+                <span>Chef</span>
               </h1>
               <p>
                 core values are the fundamental beliefs of a <br /> person or
@@ -73,6 +74,10 @@ const Footer = () => {
                   Email: info@globalchef.com.ng
                 </li>
               </ul>
+              <form>
+                <input type="text" placeholder="Email Address" />
+                <button type="submit">Subscribe</button>
+              </form>
             </div>
 
             <div className="col-md-2">
