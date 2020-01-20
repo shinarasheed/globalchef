@@ -49,6 +49,15 @@ const Navbar = () => {
                 Sign In
               </Link>
             </li>
+            <li className="nav-item active">
+              <Link
+                className="nav-link signup"
+                to="#"
+                style={{ marginLeft: "20px" }}
+              >
+                Sign Up
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
