@@ -7,6 +7,7 @@ import Navbar from "./includes/Navbar";
 import Footer from "./components/Footer/Footer";
 import Signup from "./components/Signup";
 import Signin from "./components/Signin";
+import Classes from "./components/Classes/Classes";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route exact path="/" component={Landingpage} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/signin" component={Signin} />
+          <Route path="/classes" component={Classes} />
         </Switch>
         <Footer />
       </Router>
