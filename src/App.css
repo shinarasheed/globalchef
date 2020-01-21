@@ -704,6 +704,11 @@ nav ul li a.signup:hover {
 #signupFirstSection span {
   font-weight: bold;
 }
+
+#signupFirstSection .col-md-3 a img {
+  width: 20px;
+  height: 20px;
+}
 #contactFirstSection > .row.row_1 {
   padding: 20px 125px 10px 125px;
 }

@@ -8,7 +8,12 @@ const Signin = () => {
           <div className="col-md-3">
             <div className="clear">
               <span>Welcome Back!</span>
-              <Link to="chef">x</Link>
+              <Link to="chef">
+                <img
+                  src={require("../assets/images/cancel-button.png")}
+                  alt=""
+                />
+              </Link>
             </div>
             <hr className="full_line" />
 
