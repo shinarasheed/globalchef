@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-const Classes = () => {
+const Resources = () => {
   return (
     <>
       <div id="contactFirstSection" className="container-fluid">
@@ -118,4 +117,4 @@ const Classes = () => {
   );
 };
 
-export default Classes;
+export default Resources;
