@@ -83,13 +83,13 @@ const Footer = () => {
             <div className="col-md-2">
               <ul>
                 <li>
-                  <Link to="globalchef">Home</Link>
+                  <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <Link to="globalchef">About Us</Link>
+                  <Link to="/about-us">About Us</Link>
                 </li>
                 <li>
-                  <Link to="globalchef">Classes</Link>
+                  <Link to="/classes">Classes</Link>
                 </li>
               </ul>
             </div>
