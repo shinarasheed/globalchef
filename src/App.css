@@ -586,7 +586,119 @@ nav ul li a.signup:hover {
   background-color: #fff;
   font-weight: 100;
 }
+#signupFirstSection {
+  background: #f5f5f5;
+}
 
+#signupFirstSection .col-md-3 {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  background-color: #fff;
+  z-index: 9999;
+  box-shadow: -1px 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+#signupFirstSection > .row {
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#signupFirstSection div.clear {
+  display: flex;
+  justify-content: space-between;
+}
+
+#signupFirstSection div.parent_div {
+  display: flex;
+  flex-direction: column;
+}
+
+#signupFirstSection input[type="text"] {
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+}
+
+#signupFirstSection input::placeholder {
+  color: grey;
+  font-size: 14px;
+}
+
+#signupFirstSection a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#signupFirstSection h5 {
+  font-weight: bold;
+}
+
+#signupFirstSection p {
+  font-size: 13px;
+}
+
+#signupFirstSection div.checkbox p {
+  padding-left: 24px;
+  position: relative;
+  top: -24px;
+  font-size: 13px;
+}
+
+#signupFirstSection button {
+  width: 100%;
+  border: none;
+  background-color: red;
+  color: #fff;
+  padding: 6px;
+  border-radius: 4px;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+#signupFirstSection button.facebook {
+  width: 100%;
+  border: none;
+  background-color: blue;
+  color: #fff;
+  padding: 6px;
+  border-radius: 4px;
+  font-size: 17px;
+  margin-bottom: 18px;
+}
+
+#signupFirstSection h1 {
+  text-align: center;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+#signupFirstSection h3 {
+  font-size: 17px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+#signupFirstSection h3 a {
+  color: blue;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#signupFirstSection hr.full_line {
+  width: 110%;
+  margin-left: -16px;
+  border-top: 1px solid #ddd;
+}
+
+#signupFirstSection span {
+  font-weight: bold;
+=======
 #contactFirstSection>.row.row_1 {
   padding: 20px 125px 10px 125px;
 }
