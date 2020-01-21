@@ -528,6 +528,10 @@ nav ul li a.signup:hover {
   font-weight: bold;
 }
 
+#footerFirstSection .col-md-4 h1 a {
+  text-decoration: none;
+}
+
 #footerFirstSection .col-md-4 h1 span:last-child {
   color: red;
 }

@@ -9,8 +9,10 @@ const Footer = () => {
           <div className="row">
             <div className="col-md-4">
               <h1>
-                <span>Global</span>
-                <span>Chef</span>
+                <Link to="/">
+                  <span>Global</span>
+                  <span>Chef</span>
+                </Link>
               </h1>
               <p>
                 core values are the fundamental beliefs of a <br /> person or
