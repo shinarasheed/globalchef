@@ -28,6 +28,16 @@ const Classes = () => {
               src={require("../../assets/images/cookingvideo_small.png")}
               alt=""
             />
+<<<<<<< HEAD
+=======
+          </div>
+        </div>
+        <div className="row row_3">
+          <div className="col-md-12">
+            <Link to="/about">About</Link>
+            <Link to="/resources">Resources</Link>
+            <Link to="/reviews">Reviews</Link>
+>>>>>>> Classes
           </div>
         </div>
       </div>
