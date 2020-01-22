@@ -834,3 +834,14 @@ nav ul li a.signup:hover {
 #contactSecondSection .row.tutor_row {
   padding-top: 40px;
 }
+
+#contactFirstSection .row.row_3 {
+  padding: 20px 210px;
+}
+
+#contactFirstSection .row.row_3 a {
+  color: #000;
+  font-size: 17px;
+  text-decoration: none;
+  padding-right: 150px;
+}
