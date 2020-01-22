@@ -8,7 +8,7 @@ const Signup = () => {
         <div className="row">
           <div className="col-md-3">
             <div className="clear">
-              <span>Sign Up and start Learning</span>
+              <span>Sign Up and start Learning</span
               <Link to="chef">
                 <img
                   src={require("../assets/images/cancel-button.png")}
