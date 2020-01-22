@@ -1083,3 +1083,14 @@ nav ul li a.signup:hover {
   text-decoration: none;
   padding-right: 150px;
 }
+
+#contactSecondSection button.about {
+  background: #fff !important;
+  border: none !important;
+}
+
+#contactSecondSection button.about:active {
+  background: #fff !important;
+  border: none !important;
+  border-color: none !important;
+}

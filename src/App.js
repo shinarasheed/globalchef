@@ -10,21 +10,23 @@ import Signin from "./components/Signin";
 import Classes from "./components/Classes/Classes";
 import Resources from "./components/Resources/Resources";
 import Learning from "./components/Learning/Learning";
-
+import { ThemeProvider } from "@chakra-ui/core";
 function App() {
   return (
     <>
       <Router>
-        <Navbar />
-        <Switch>
-          <Route exact path="/" component={Landingpage} />
-          <Route exact path="/signup" component={Signup} />
-          <Route exact path="/signin" component={Signin} />
-          <Route path="/classes" component={Classes} />
-          <Route path="/resources" component={Resources} />
-          <Route path="/learning" component={Learning} />
-        </Switch>
-        <Footer />
+        <ThemeProvider>
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={Landingpage} />
+            <Route exact path="/signup" component={Signup} />
+            <Route exact path="/signin" component={Signin} />
+            <Route path="/classes" component={Classes} />
+            <Route path="/resources" component={Resources} />
+            <Route path="/learning" component={Learning} />
+          </Switch>
+          <Footer />
+        </ThemeProvider>
       </Router>
     </>
   );

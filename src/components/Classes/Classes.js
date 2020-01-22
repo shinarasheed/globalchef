@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/core";
 
 const Classes = () => {
   return (
@@ -30,55 +30,78 @@ const Classes = () => {
             />
           </div>
         </div>
-        <div className="row row_3">
+        {/* <div className="row row_3">
           <div className="col-md-12">
             <Link to="/about">About</Link>
             <Link to="/resources">Resources</Link>
             <Link to="/reviews">Reviews</Link>
           </div>
-        </div>
+        </div> */}
       </div>
       <div id="contactSecondSection" className="container-fluid">
         <div className="row parent_row">
           <div className="col-md-7">
-            <div className="row">
-              <div className="col-md-12 about_class">
-                <h4>About this class</h4>
-                <p>
-                  Bold, Delicious and packed with flavour. Who doesn't love
-                  enchiladas? In this fast-paced class, geared <br /> towards
-                  the beginner, you'll learn the basics of making green chicken
-                  enchiladas with an array of <br /> traditional ingredients,
-                  using the time-honored(read: secret) techniques of the Mexican
-                  kitchen, from <br />
-                  charring on a comal to frying sauces, on your way to making
-                  luscious, deep-flavored enchiladas.
-                </p>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-12">
-                <div className="row tutor_row">
-                  <div className="col-md-4 tutor_div">
-                    <h5>About the tutor</h5>
-                    <img
-                      src={require("../../assets/images/classeschef.png")}
-                      alt=""
-                    />
+            <Tabs variant="unstyled">
+              <TabList>
+                <Tab
+                  _selected={{ color: "black", bg: "red.500" }}
+                  className="about"
+                >
+                  About
+                </Tab>
+                <Tab>Resources</Tab>
+                <Tab>Reviews</Tab>
+              </TabList>
+
+              <TabPanels>
+                <TabPanel>
+                  <div className="row">
+                    <div className="col-md-12 about_class">
+                      <h4>About this class</h4>
+                      <p>
+                        Bold, Delicious and packed with flavour. Who doesn't
+                        love enchiladas? In this fast-paced class, geared <br />
+                        towards the beginner, you'll learn the basics of making
+                        green chicken enchiladas with an array of <br />
+                        traditional ingredients, using the time-honored(read:
+                        secret) techniques of the Mexican kitchen, from <br />
+                        charring on a comal to frying sauces, on your way to
+                        making luscious, deep-flavored enchiladas.
+                      </p>
+                    </div>
                   </div>
-                  <div className="col-md-8">
-                    <p>Chef Majekadegbe Fishly</p>
-                    <span>Lagos Nigeria</span>
-                    <p>
-                      Olayemi Ibikunle has 2 years of experience working in five
-                      private <br /> schools across in Nigeria. She earned a
-                      B.Ed and a Masters in <br /> Teaching and Learning from
-                      Harvard University
-                    </p>
+                  <div className="row">
+                    <div className="col-md-12">
+                      <div className="row tutor_row">
+                        <div className="col-md-4 tutor_div">
+                          <h5>About the tutor</h5>
+                          <img
+                            src={require("../../assets/images/classeschef.png")}
+                            alt=""
+                          />
+                        </div>
+                        <div className="col-md-8">
+                          <p>Chef Majekadegbe Fishly</p>
+                          <span>Lagos Nigeria</span>
+                          <p>
+                            Olayemi Ibikunle has 2 years of experience working
+                            in five private <br /> schools across in Nigeria.
+                            She earned a B.Ed and a Masters in <br /> Teaching
+                            and Learning from Harvard University
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
+                </TabPanel>
+                <TabPanel>
+                  <p>two!</p>
+                </TabPanel>
+                <TabPanel>
+                  <p>three!</p>
+                </TabPanel>
+              </TabPanels>
+            </Tabs>
           </div>
           <div className="col-md-4 food_image">
             <h2>Coming up next (Recommended)</h2>
