@@ -635,7 +635,7 @@ nav ul li a.signup:hover {
   box-shadow: -1px 6px 15px rgba(0, 0, 0, 0.5);
 }
 
-#signupFirstSection>.row {
+#signupFirstSection > .row {
   justify-content: center;
   align-items: center;
   padding-top: 20px;
@@ -713,7 +713,6 @@ nav ul li a.signup:hover {
   padding-bottom: 20px;
 }
 
-
 #signupFirstSection {
   background: #f5f5f5;
 }
@@ -728,7 +727,7 @@ nav ul li a.signup:hover {
   box-shadow: -1px 6px 15px rgba(0, 0, 0, 0.5);
 }
 
-#signupFirstSection>.row {
+#signupFirstSection > .row {
   justify-content: center;
   align-items: center;
   padding-top: 20px;
@@ -827,7 +826,6 @@ nav ul li a.signup:hover {
   font-weight: bold;
 }
 
-#contactFirstSection>.row.row_1 {
 #signupFirstSection .col-md-3 a img {
   width: 20px;
   height: 20px;
@@ -1074,7 +1072,7 @@ nav ul li a.signup:hover {
 
 #contactSecondSection .row.tutor_row {
   padding-top: 40px;
-  }
+}
 #contactFirstSection .row.row_3 {
   padding: 20px 210px;
 }
