@@ -9,6 +9,7 @@ import Signup from "./components/Signup";
 import Signin from "./components/Signin";
 import Classes from "./components/Classes/Classes";
 import Resources from "./components/Resources/Resources";
+import Learning from "./components/Learning/Learning";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/signin" component={Signin} />
           <Route path="/classes" component={Classes} />
           <Route path="/resources" component={Resources} />
+          <Route path="/learning" component={Learning} />
         </Switch>
         <Footer />
       </Router>
