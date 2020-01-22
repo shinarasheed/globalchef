@@ -34,7 +34,7 @@ const Resources = () => {
           <div className="col-md-12">
             <Link to="/about">About</Link>
             <Link to="/resources">Resources</Link>
-            <Link to="/reviews">Reviews</Link>
+            <Link to="/learning">Reviews</Link>
           </div>
         </div>
       </div>
