@@ -9,8 +9,10 @@ const Footer = () => {
           <div className="row">
             <div className="col-md-4">
               <h1>
-                <span>Global</span>
-                <span>Chef</span>
+                <Link to="/">
+                  <span>Global</span>
+                  <span>Chef</span>
+                </Link>
               </h1>
               <p>
                 core values are the fundamental beliefs of a <br /> person or
@@ -83,13 +85,13 @@ const Footer = () => {
             <div className="col-md-2">
               <ul>
                 <li>
-                  <Link to="globalchef">Home</Link>
+                  <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <Link to="globalchef">About Us</Link>
+                  <Link to="/about-us">About Us</Link>
                 </li>
                 <li>
-                  <Link to="globalchef">Classes</Link>
+                  <Link to="/classes">Classes</Link>
                 </li>
               </ul>
             </div>
