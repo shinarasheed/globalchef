@@ -44,8 +44,8 @@ nav ul li a.signup:hover {
   color: #fff !important;
   font-weight: 600 !important;
 }
-
-.nav-link:hover, .nav-link:active {
+.nav-link:hover,
+.nav-link:active {
   color: yellow !important;
 }
 
@@ -100,15 +100,15 @@ nav ul li a.signup:hover {
   font-weight: bold;
 }
 
-#homeSecondSection>.row {
+#homeSecondSection > .row {
   justify-content: center;
 }
 
 #homeSecondSection .col-md-3 {
   text-align: center;
 }
-
-#homeSecondSection .col-md-3:nth-child(2), #homeSecondSection .col-md-3:nth-child(3) {
+#homeSecondSection .col-md-3:nth-child(2),
+#homeSecondSection .col-md-3:nth-child(3) {
   border-left: 1px solid #ddd;
 }
 
@@ -204,13 +204,11 @@ nav ul li a.signup:hover {
   height: 461px;
   position: relative;
 }
-
-#homeFourthSection>.row {
+#homeFourthSection > .row {
   justify-content: center;
   height: 100%;
 }
-
-#homeFourthSection>.row .col-md-6 {
+#homeFourthSection > .row .col-md-6 {
   padding-top: 40px;
 }
 
@@ -315,8 +313,7 @@ nav ul li a.signup:hover {
 #homeFifthSection .row.parent_row {
   padding: 50px 0px 180px 0px;
 }
-
-#homeFifthSection>.row .col-md-6 {
+#homeFifthSection > .row .col-md-6 {
   margin-left: 247px;
 }
 
@@ -332,8 +329,7 @@ nav ul li a.signup:hover {
   width: 630px;
   height: 580px;
 }
-
-#homeSixthSection>.row.parent_row {
+#homeSixthSection > .row.parent_row {
   justify-content: center;
 }
 
@@ -381,8 +377,7 @@ nav ul li a.signup:hover {
 #homeSixthSection p {
   margin-bottom: 0;
 }
-
-#homeSixthSection>.row.parent_row {
+#homeSixthSection > .row.parent_row {
   justify-content: flex-end;
 }
 
@@ -458,7 +453,9 @@ nav ul li a.signup:hover {
   display: inline;
 }
 
-#footerFirstSection ul.social li:nth-child(2) a, #footerFirstSection ul.social li:nth-child(3) a, #footerFirstSection ul.social li:nth-child(4) a {
+#footerFirstSection ul.social li:nth-child(2) a,
+#footerFirstSection ul.social li:nth-child(3) a,
+#footerFirstSection ul.social li:nth-child(4) a {
   padding-left: 20px;
   text-decoration: none;
 }
@@ -496,18 +493,17 @@ nav ul li a.signup:hover {
   font-weight: bold;
 }
 
-#footerFirstSection>.row {
+#footerFirstSection > .row {
   justify-content: center;
   padding: 80px 20px;
 }
 
-#footerFirstSection>.row .col-md-4:nth-child(2) {
+#footerFirstSection > .row .col-md-4:nth-child(2) {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-#footerFirstSection>.row .col-md-4:nth-child(2) h2 {
+#footerFirstSection > .row .col-md-4:nth-child(2) h2 {
   padding-right: 215px;
   font-size: 17px;
   font-weight: bold;
@@ -518,7 +514,7 @@ nav ul li a.signup:hover {
   justify-content: flex-end;
 }
 
-#footerFirstSection>.row::after {
+#footerFirstSection > .row::after {
   content: "";
   display: block;
   width: 940px;
@@ -530,6 +526,10 @@ nav ul li a.signup:hover {
 #footerFirstSection .col-md-4 h1 {
   font-size: 25px;
   font-weight: bold;
+}
+
+#footerFirstSection .col-md-4 h1 a {
+  text-decoration: none;
 }
 
 #footerFirstSection .col-md-4 h1 span:last-child {
@@ -544,7 +544,7 @@ nav ul li a.signup:hover {
   font-size: 14px;
 }
 
-#footerSecondSection>.row {
+#footerSecondSection > .row {
   justify-content: center;
 }
 
@@ -583,6 +583,7 @@ nav ul li a.signup:hover {
   color: #fff;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
+  border-right: 0;
 }
 
 #footerFirstSection .col-md-4 form button {
@@ -594,6 +595,98 @@ nav ul li a.signup:hover {
   background-color: #fff;
   font-weight: 100;
 }
+#signupFirstSection {
+  background: #f5f5f5;
+}
+
+#signupFirstSection .col-md-3 {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  background-color: #fff;
+  z-index: 9999;
+  box-shadow: -1px 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+#signupFirstSection > .row {
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#signupFirstSection div.clear {
+  display: flex;
+  justify-content: space-between;
+}
+
+#signupFirstSection div.parent_div {
+  display: flex;
+  flex-direction: column;
+}
+
+#signupFirstSection input[type="text"] {
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+}
+
+#signupFirstSection input::placeholder {
+  color: grey;
+  font-size: 14px;
+}
+
+#signupFirstSection a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#signupFirstSection h5 {
+  font-weight: bold;
+}
+
+#signupFirstSection p {
+  font-size: 13px;
+}
+
+#signupFirstSection div.checkbox p {
+  padding-left: 24px;
+  position: relative;
+  top: -24px;
+  font-size: 13px;
+}
+
+#signupFirstSection button {
+  width: 100%;
+  border: none;
+  background-color: red;
+  color: #fff;
+  padding: 6px;
+  border-radius: 4px;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+#signupFirstSection button.facebook {
+  width: 100%;
+  border: none;
+  background-color: blue;
+  color: #fff;
+  padding: 6px;
+  border-radius: 4px;
+  font-size: 17px;
+  margin-bottom: 18px;
+}
+
+#signupFirstSection h1 {
+  text-align: center;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
 
 #signupFirstSection {
   background: #f5f5f5;
@@ -686,7 +779,6 @@ nav ul li a.signup:hover {
   font-size: 20px;
   padding-bottom: 20px;
 }
-
 #signupFirstSection h3 {
   font-size: 17px;
   text-align: center;
@@ -709,11 +801,15 @@ nav ul li a.signup:hover {
   font-weight: bold;
 }
 
-#contactFirstSection>.row.row_1 {
+#signupFirstSection .col-md-3 a img {
+  width: 20px;
+  height: 20px;
+}
+#contactFirstSection > .row.row_1 {
   padding: 20px 125px 10px 125px;
 }
 
-#contactFirstSection>.row.row_1 .col-md-12 {
+#contactFirstSection > .row.row_1 .col-md-12 {
   padding-left: 0;
 }
 
