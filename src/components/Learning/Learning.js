@@ -4,8 +4,8 @@ const Learning = () => {
   return (
     <>
       <div id="learningFirstSection" className="container-fluid">
-        <div className="row">
-          <div className="col-md-4 categories">
+        <div className="row parent">
+          <div className="col-md-3 categories">
             <ul>
               <li>Catergories</li>
               <li>Deserts</li>
@@ -159,9 +159,9 @@ const Learning = () => {
               </div>
             </div>
             <div className="row recomended">
-              <div className="col-md-8">
+              <div className="col-md-12">
                 <div className="row">
-                  <div className="col-md-8">
+                  <div className="col-md-12 recommended_categories">
                     <h1>What to Learn Next?</h1>
                     <h4>Recommended Categories for you</h4>
                   </div>

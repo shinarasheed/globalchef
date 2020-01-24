@@ -41,8 +41,8 @@ const Classes = () => {
       <div id="contactSecondSection" className="container-fluid">
         <div className="row parent_row">
           <div className="col-md-7">
-            <Tabs variant="unstyled">
-              <TabList>
+            <Tabs variant="unstyled" isFitted>
+              <TabList className="tab">
                 <Tab
                   _selected={{ color: "black", bg: "red.500" }}
                   className="about"
@@ -97,7 +97,7 @@ const Classes = () => {
                 <TabPanel>
                   <div className="row">
                     <div className="col-md-12 about_class">
-                      <div>
+                      <div className="resources">
                         <img
                           src={require("../../assets/images/feather.png")}
                           alt=""
@@ -105,7 +105,7 @@ const Classes = () => {
                         <span>Resources</span>
                       </div>
                       <div>
-                        <p>
+                        <p className="download">
                           You can download the MP4 file as well as PDF file
                           below
                         </p>
