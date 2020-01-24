@@ -45,7 +45,8 @@ nav ul li a.signup:hover {
   font-weight: 600 !important;
 }
 
-.nav-link:hover, .nav-link:active {
+.nav-link:hover,
+.nav-link:active {
   color: yellow !important;
 }
 
@@ -100,7 +101,7 @@ nav ul li a.signup:hover {
   font-weight: bold;
 }
 
-#homeSecondSection>.row {
+#homeSecondSection > .row {
   justify-content: center;
 }
 
@@ -108,7 +109,8 @@ nav ul li a.signup:hover {
   text-align: center;
 }
 
-#homeSecondSection .col-md-3:nth-child(2), #homeSecondSection .col-md-3:nth-child(3) {
+#homeSecondSection .col-md-3:nth-child(2),
+#homeSecondSection .col-md-3:nth-child(3) {
   border-left: 1px solid #ddd;
 }
 
@@ -205,12 +207,12 @@ nav ul li a.signup:hover {
   position: relative;
 }
 
-#homeFourthSection>.row {
+#homeFourthSection > .row {
   justify-content: center;
   height: 100%;
 }
 
-#homeFourthSection>.row .col-md-6 {
+#homeFourthSection > .row .col-md-6 {
   padding-top: 40px;
 }
 
@@ -316,7 +318,7 @@ nav ul li a.signup:hover {
   padding: 50px 0px 180px 0px;
 }
 
-#homeFifthSection>.row .col-md-6 {
+#homeFifthSection > .row .col-md-6 {
   margin-left: 247px;
 }
 
@@ -333,7 +335,7 @@ nav ul li a.signup:hover {
   height: 580px;
 }
 
-#homeSixthSection>.row.parent_row {
+#homeSixthSection > .row.parent_row {
   justify-content: center;
 }
 
@@ -382,7 +384,7 @@ nav ul li a.signup:hover {
   margin-bottom: 0;
 }
 
-#homeSixthSection>.row.parent_row {
+#homeSixthSection > .row.parent_row {
   justify-content: flex-end;
 }
 
@@ -458,7 +460,9 @@ nav ul li a.signup:hover {
   display: inline;
 }
 
-#footerFirstSection ul.social li:nth-child(2) a, #footerFirstSection ul.social li:nth-child(3) a, #footerFirstSection ul.social li:nth-child(4) a {
+#footerFirstSection ul.social li:nth-child(2) a,
+#footerFirstSection ul.social li:nth-child(3) a,
+#footerFirstSection ul.social li:nth-child(4) a {
   padding-left: 20px;
   text-decoration: none;
 }
@@ -496,18 +500,18 @@ nav ul li a.signup:hover {
   font-weight: bold;
 }
 
-#footerFirstSection>.row {
+#footerFirstSection > .row {
   justify-content: center;
   padding: 80px 20px;
 }
 
-#footerFirstSection>.row .col-md-4:nth-child(2) {
+#footerFirstSection > .row .col-md-4:nth-child(2) {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#footerFirstSection>.row .col-md-4:nth-child(2) h2 {
+#footerFirstSection > .row .col-md-4:nth-child(2) h2 {
   padding-right: 215px;
   font-size: 17px;
   font-weight: bold;
@@ -518,7 +522,7 @@ nav ul li a.signup:hover {
   justify-content: flex-end;
 }
 
-#footerFirstSection>.row::after {
+#footerFirstSection > .row::after {
   content: "";
   display: block;
   width: 940px;
@@ -548,7 +552,7 @@ nav ul li a.signup:hover {
   font-size: 14px;
 }
 
-#footerSecondSection>.row {
+#footerSecondSection > .row {
   justify-content: center;
 }
 
@@ -614,7 +618,7 @@ nav ul li a.signup:hover {
   box-shadow: -1px 6px 15px rgba(0, 0, 0, 0.5);
 }
 
-#signupFirstSection>.row {
+#signupFirstSection > .row {
   justify-content: center;
   align-items: center;
   padding-top: 20px;
@@ -640,7 +644,7 @@ nav ul li a.signup:hover {
   box-shadow: -1px 6px 15px rgba(0, 0, 0, 0.5);
 }
 
-#signupFirstSection>.row {
+#signupFirstSection > .row {
   justify-content: center;
   align-items: center;
   padding-top: 20px;
@@ -732,7 +736,7 @@ nav ul li a.signup:hover {
   box-shadow: -1px 6px 15px rgba(0, 0, 0, 0.5);
 }
 
-#signupFirstSection>.row {
+#signupFirstSection > .row {
   justify-content: center;
   align-items: center;
   padding-top: 20px;
@@ -837,11 +841,11 @@ nav ul li a.signup:hover {
   height: 20px;
 }
 
-#contactFirstSection>.row.row_1 {
+#contactFirstSection > .row.row_1 {
   padding: 20px 125px 10px 125px;
 }
 
-#contactFirstSection>.row.row_1 .col-md-12 {
+#contactFirstSection > .row.row_1 .col-md-12 {
   padding-left: 0;
 }
 
@@ -959,11 +963,11 @@ nav ul li a.signup:hover {
   padding-top: 40px;
 }
 
-#contactFirstSection>.row.row_1 {
+#contactFirstSection > .row.row_1 {
   padding: 20px 125px 10px 125px;
 }
 
-#contactFirstSection>.row.row_1 .col-md-12 {
+#contactFirstSection > .row.row_1 .col-md-12 {
   padding-left: 0;
 }
 
@@ -991,7 +995,9 @@ nav ul li a.signup:hover {
 }
 
 #contactSecondSection .col-md-4 h2 {
-  font-size: 22px;
+  font-size: 23px;
+  padding-bottom: 15px;
+  font-weight: 600;
 }
 
 #contactSecondSection .col-md-4.food_image h5 {
@@ -1007,6 +1013,15 @@ nav ul li a.signup:hover {
 #contactSecondSection .col-md-12.col-md-12.about_class p {
   font-size: 15px;
   line-height: 30px;
+}
+
+#contactSecondSection .col-md-12.col-md-12.about_class p.download {
+  padding-left: 57px;
+}
+
+#contactSecondSection .col-md-4 {
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 #contactSecondSection .col-md-4.tutor_div h5 {
@@ -1092,9 +1107,25 @@ nav ul li a.signup:hover {
   padding-right: 150px;
 }
 
-#contactSecondSection button.about {
+#contactSecondSection button {
   background: #fff !important;
   border: none !important;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+#contactSecondSection div.tab {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#contactSecondSection .col-md-12.about_class span {
+  padding-left: 20px;
+}
+
+#contactSecondSection .col-md-12.about_class div.resources span {
+  font-size: 26px;
+  font-weight: bold;
 }
 
 #contactSecondSection button.about:active {
@@ -1107,13 +1138,46 @@ nav ul li a.signup:hover {
   background-color: #f5f5f5;
 }
 
+#learningFirstSection > .row.parent {
+  justify-content: center;
+}
+
 #learningFirstSection .col-md-3.image_div img.food_image {
   width: 100%;
 }
 
 #learningFirstSection .col-md-8 {
-  padding-top: 50px;
-  padding-bottom: 100px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#learningFirstSection .row.recomended {
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+#learningFirstSection .col-md-12.recommended_categories h1 {
+  padding-bottom: 20px;
+  font-size: 35px;
+}
+
+#learningFirstSection .col-md-12.recommended_categories h4 {
+  padding-bottom: 20px;
+  font-size: 21px;
+}
+
+#learningFirstSection .row.learn_next {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+#learningFirstSection .row.recomended .col-md-12 .row:first-child {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#learningFirstSection .col-md-8.recommended_categories {
+  padding-left: 0;
 }
 
 #learningFirstSection .col-md-8 .col-md-5 {
@@ -1146,23 +1210,33 @@ nav ul li a.signup:hover {
   padding: 0;
   margin-right: 60px;
   font-size: 14px;
+  font-weight: bold;
 }
 
-/* 
-#learningFirstSection .col-md-4.categories {
+#learningFirstSection .col-md-8 .col-md-3.image_div div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#learningFirstSection .col-md-3.categories {
   display: flex;
   justify-content: center;
-} */
+}
 
-#learningFirstSection .col-md-4.categories ul {
+#learningFirstSection .col-md-3.categories ul {
   list-style: none;
-  margin-left: 80px;
   margin-top: 30px;
   padding: 0;
 }
 
-#learningFirstSection .col-md-4.categories ul li {
+#learningFirstSection .col-md-3.categories ul li {
   padding-bottom: 20px;
+}
+
+#learningFirstSection .col-md-3.categories ul li:first-child {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 40px;
 }
 
 #learningFirstSection .row.pupolar_classes {
