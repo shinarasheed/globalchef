@@ -28,8 +28,13 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="#">
+              <Link className="nav-link" to="/enrolled">
                 About Us
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/learning">
+                Learning
               </Link>
             </li>
             <li className="nav-item">
