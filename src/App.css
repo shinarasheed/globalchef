@@ -4,6 +4,10 @@ body {
   background-color: #fff !important;
 }
 
+nav {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
 nav a.nav-brand img {
   width: 205px;
   height: 60px;
