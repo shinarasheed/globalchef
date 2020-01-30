@@ -26,29 +26,29 @@ const Enrolled = () => {
                       src={require("../assets/images/blackboard.png")}
                       alt=""
                     />
-                    <Link to="chef">Enrolled Classes</Link>
+                    <Link to="/enrolled">Enrolled Classes</Link>
                   </li>
                   <li>
                     <img
                       src={require("../assets/images/save-icon-silhouette.png")}
                       alt=""
                     />
-                    <Link to="chef">Saved Classes</Link>
+                    <Link to="/saved">Saved Classes</Link>
                   </li>
                   <li>
                     <img src={require("../assets/images/user.png")} alt="" />
-                    <Link to="chef">Edit Profile</Link>
+                    <Link>Edit Profile</Link>
                   </li>
                   <li>
                     <img
                       src={require("../assets/images/settings.png")}
                       alt=""
                     />
-                    <Link to="chef">Linked Accounts</Link>
+                    <Link>Linked Accounts</Link>
                   </li>
                   <li>
                     <img src={require("../assets/images/logout.png")} alt="" />
-                    <Link to="chef">Sign Out</Link>
+                    <Link>Sign Out</Link>
                   </li>
                 </ul>
               </div>

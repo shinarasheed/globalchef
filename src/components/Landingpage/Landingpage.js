@@ -11,7 +11,7 @@ const Landingpage = () => {
             <h3>
               Get Unlimited access to the <br /> world of food
             </h3>
-            <Link to="cooking">Get Started</Link>
+            <Link to="/signin">Get Started</Link>
           </div>
         </div>
       </div>
@@ -137,7 +137,7 @@ const Landingpage = () => {
                 </p>
               </div>
             </div>
-            <Link to="classes">Explore all Classes</Link>
+            <Link to="/learning">Explore all Classes</Link>
           </div>
         </div>
       </div>
