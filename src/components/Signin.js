@@ -22,7 +22,9 @@ const Signin = () => {
                 <input type="text" placeholder="Full Name" />
                 <input type="text" placeholder="Password" />
                 <div>
-                  <button type="submit">Log In</button>
+                  <Link to="/saved" className="login">
+                    Log In
+                  </Link>
                 </div>
                 <h1>or</h1>
 

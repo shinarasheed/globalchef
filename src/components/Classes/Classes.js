@@ -21,9 +21,8 @@ const Classes = () => {
           </div>
         </div>
         <div className="row row_2">
-          <div className="col-md-12">
-            <div id="row_2_overlay"></div>
-
+          <div className="col-md-10">
+            <div className="overlay"></div>
             <img
               src={require("../../assets/images/cookingvideo_small.png")}
               alt=""

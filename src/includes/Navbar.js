@@ -28,14 +28,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/enrolled">
-                Enrolled
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/learning">
-                Learning
-              </Link>
+              <Link className="nav-link">About Us</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/classes">
@@ -43,9 +36,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/saved">
-                Saved
-              </Link>
+              <Link className="nav-link">Contact Us</Link>
             </li>
           </ul>
           <ul className="navbar-nav mt-2 mt-lg-0 signup">
