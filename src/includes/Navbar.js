@@ -38,11 +38,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-<<<<<<< HEAD
-              <Link className="nav-link" to="#">
-=======
               <Link className="nav-link" to="/saved">
->>>>>>> lastpage
                 Contact Us
               </Link>
             </li>

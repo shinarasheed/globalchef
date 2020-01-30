@@ -41,13 +41,8 @@ const Classes = () => {
       <div id="contactSecondSection" className="container-fluid">
         <div className="row parent_row">
           <div className="col-md-7">
-<<<<<<< HEAD
             <Tabs variant="unstyled" isFitted>
               <TabList className="tab">
-=======
-            <Tabs variant="unstyled">
-              <TabList>
->>>>>>> lastpage
                 <Tab
                   _selected={{ color: "black", bg: "red.500" }}
                   className="about"
@@ -100,7 +95,6 @@ const Classes = () => {
                   </div>
                 </TabPanel>
                 <TabPanel>
-<<<<<<< HEAD
                   <div className="row">
                     <div className="col-md-12 about_class">
                       <div className="resources">
@@ -176,12 +170,6 @@ const Classes = () => {
                       </div>
                     </div>
                   </div>
-=======
-                  <p>two!</p>
-                </TabPanel>
-                <TabPanel>
-                  <p>three!</p>
->>>>>>> lastpage
                 </TabPanel>
               </TabPanels>
             </Tabs>
