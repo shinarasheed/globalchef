@@ -13,6 +13,10 @@ nav a.nav-brand img {
   height: 60px;
 }
 
+.round-img{
+  border-radius: 50%;
+}
+
 nav ul.signup {
   margin-left: auto;
 }
