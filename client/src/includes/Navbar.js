@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-const Navbar = () => {
+import { connect } from "react-redux";
+import {logout} from '../actions/auth'
+const Navbar = ({logout}) => {
   return (
     <>
       <nav className="navbar navbar-expand-lg">
@@ -55,6 +56,11 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item active">
+              <a onClick={logout} href="#!" className="nav-link signup">
+                Logout
+              </a>
+            </li>
+            <li className="nav-item active">
               <Link
                 className="nav-link signup"
                 to="/signup"
@@ -70,4 +76,8 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+export default connect(mapStateToProps, { logout })(Navbar);

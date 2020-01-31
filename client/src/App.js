@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect}from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -13,26 +13,45 @@ import Learning from "./components/Learning/Learning";
 import { ThemeProvider } from "@chakra-ui/core";
 import Contact from "./components/Contact/Contact";
 import Enrolled from "./components/Enrolled";
+import Alert from "./components/Alert";
+import setAuthToken from './utills/setAuthToken';
+import PrivateRoute from './components/PrivateRoute'
+// Redux
+import { Provider } from "react-redux";
+import store from "./store";
+import { loadUser } from "./actions/auth";
+
+
+if(localStorage.token){
+  setAuthToken(localStorage.token)
+}
 
 function App() {
+
+  useEffect(()=>{
+    store.dispatch(loadUser())
+  })
   return (
     <>
-      <Router>
-        <ThemeProvider>
-          <Navbar />
-          <Switch>
-            <Route exact path="/" component={Landingpage} />
-            <Route exact path="/signup" component={Signup} />
-            <Route exact path="/signin" component={Signin} />
-            <Route path="/classes" component={Classes} />
-            <Route path="/resources" component={Resources} />
-            <Route path="/learning" component={Learning} />
-            <Route path="/saved" component={Contact} />
-            <Route path="/enrolled" component={Enrolled} />
-          </Switch>
-          <Footer />
-        </ThemeProvider>
-      </Router>
+      <Provider store={store}>
+        <Router>
+          <ThemeProvider>
+            <Navbar />
+            <Alert/>
+            <Switch>
+              <Route exact path="/" component={Landingpage} /> 
+              <Route exact path="/signup" component={Signup} />
+              <Route exact path="/signin" component={Signin} />
+              <Route exact path="/learning" component={Learning} />
+              <PrivateRoute exact path="/classes" component={Classes} />
+              <PrivateRoute exact path="/resources" component={Resources} />
+              <PrivateRoute exact path="/saved" component={Contact} />
+              <PrivateRoute exact path="/enrolled" component={Enrolled} />
+            </Switch>
+            <Footer />
+          </ThemeProvider>
+        </Router>
+      </Provider>
     </>
   );
 }

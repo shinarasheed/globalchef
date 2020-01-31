@@ -81,6 +81,9 @@ const UserSchema = new mongoose.Schema({
   datecreated: {
     type: Date,
     default: Date.now
+  },
+  newsLetters: {
+    type: Boolean,
   }
 });
 

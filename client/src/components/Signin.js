@@ -1,6 +1,28 @@
-import React from "react";
-import { Link } from "react-router-dom";
-const Signin = () => {
+import React, { useState } from "react";
+import { Link, Redirect } from "react-router-dom";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { login } from "../actions/auth";
+
+const Signin = ({ login, isAuthenticated }) => {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: ""
+  });
+
+  const { email, password } = formData;
+  const onChange = e =>
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+
+  const onSubmit = async e => {
+    e.preventDefault();
+
+    login(email, password);
+  };
+
+  if(isAuthenticated){
+    return <Redirect to="/enrolled"/>
+  }
   return (
     <>
       <div id="signupFirstSection" className="container-fluid">
@@ -17,10 +39,10 @@ const Signin = () => {
             </div>
             <hr className="full_line" />
 
-            <form>
+            <form onSubmit={e=> onSubmit(e)}>
               <div className="parent_div">
-                <input type="text" placeholder="Full Name" />
-                <input type="text" placeholder="Password" />
+                <input type="email" placeholder="Email" required name='email' value={email} onChange={e => onChange(e)} />
+                <input type="password" placeholder="Password" required name='password' value={password} onChange={e => onChange(e)} />
                 <div>
                   <button type="submit">Log In</button>
                 </div>
@@ -49,4 +71,9 @@ const Signin = () => {
   );
 };
 
-export default Signin;
+const mapStateToProps = state=>({
+  isAuthenticated: state.auth.isAuthenticated,
+  
+})
+
+export default connect(mapStateToProps, {login})(Signin);

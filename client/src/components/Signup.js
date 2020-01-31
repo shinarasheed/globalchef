@@ -1,7 +1,32 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link,  Redirect } from "react-router-dom";
+import { connect } from "react-redux";
+import { register } from "../actions/auth";
 
-const Signup = () => {
+const Signup = ({ register , isAuthenticated}) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+    newsLetters: false
+  });
+
+  const { name, email, password , newsLetters} = formData;
+
+  const onChange = e =>
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+
+  const onSubmit = e => {
+    e.preventDefault();
+    // console.log(formData);
+    
+    register({ name, email, password, newsLetters });
+  };
+
+  
+ if(isAuthenticated){
+  return <Redirect to="/enrolled"/>
+}
   return (
     <>
       <div id="signupFirstSection" className="container-fluid">
@@ -18,19 +43,22 @@ const Signup = () => {
             </div>
             <hr className="full_line" />
 
-            <form>
-              <div className="parent_div">
-                <input type="text" placeholder="Full Name" />
+            <form onSubmit={e=> onSubmit(e)} >
+            <div className="parent_div">
+                <input type="text" placeholder="Full Name" name="name" value={name} onChange={e => onChange(e)} required />
 
-                <input type="text" placeholder="Email Address" />
+                <input type="email" placeholder="Email Address"  name="email" value={email} onChange={e => onChange(e)} required/>
 
-                <input type="text" placeholder="Phone Number" />
+                {/* <input type="text" placeholder="Phone Number" /> */}
 
-                <input type="text" placeholder="Password" />
+                <input type="password" placeholder="Password" name="password" value={password} onChange={e => onChange(e)} required />
 
-                <div className="checkbox">
-                  <input type="checkbox" name="checkbox" />
-                  <p>
+                <div className="checkbox pt-3">
+                <p> <input type="checkbox" name="newsLetters" checked={newsLetters} value={newsLetters} onChange={e=> {
+                    // e.target.name= e.target.checked
+                    setFormData({...formData, newsLetters: !newsLetters})
+                  }}
+                  />{" "}
                     Yes, I want to get the most out of GlobalChef by <br />
                     recieving emails with exclusive deals, personal <br />
                     recommendations and learning tips
@@ -65,4 +93,8 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated
+});
+
+export default connect(mapStateToProps, { register })(Signup);

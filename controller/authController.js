@@ -17,6 +17,14 @@ exports.signUp = async (req, res)=>{
         // get user gravatar
         const {name, email, password} = req.body
 
+        let user = await User.findOne({ email });
+
+      if (user) {
+        return res
+          .status(400)
+          .json({ errors: [{ msg: "User already exists" }] });
+      }
+
       const avatar = gravatar.url(email, {
         s: "200",
         r: "pg",
@@ -55,19 +63,19 @@ exports.signUp = async (req, res)=>{
 exports.login = async (req, res)=>{
     try {
         const {email, password} = req.body;
-
+        // errors: [{ msg: "User already exists" }]
         // 1, if email and password exist
         if(!email || !password){
-            return res.status(400).json({ msg: 'Please input password and email' });
+            return res.status(400).json({errors:[{ msg: 'Please input password and email' }]});
         }
         //2 check if user exist and password is correct 
         const user =await User.findOne({email}).select('+password')
 
         if(!user || !(await bcrypt.compare(password, user.password))){
-            return res.status(401).json({ msg: 'incorrect email or password' });
+            return res.status(401).json({errors:[{ msg: 'Incorrect email or password' }]});
         }
 
-
+  
         //3  return jwt
         const token  = Jwt.sign({id: user._id}, process.env.JWT_SECRET, {expiresIn: process.env.JWT_EXPIRES_IN})
         res.status(200).json({
@@ -87,12 +95,19 @@ exports.login = async (req, res)=>{
 // protect route middleware
 exports.protect = async (req, res, next)=>{
     // 1, Get the token and check if it there 
-    let token;
-    if(req.headers.authorization && req.headers.authorization.startsWith('Bearer')){
-        token = req.headers.authorization.split(' ')[1]
-    }else{
-        return res.status(401).json({msg: 'No token, authorization denied'})
+
+    const token = req.header("x-auth-token");
+
+    if(!token){
+      return res.status(401).json({ msg: 'No token, authorization denied' });
     }
+
+    // let token;
+    // if(req.headers.authorization && req.headers.authorization.startsWith('Bearer')){
+    //     token = req.headers.authorization.split(' ')[1]
+    // }else{
+    //     return res.status(401).json({msg: 'No token, authorization denied'})
+    // }
 
     try {
         // verify Token
