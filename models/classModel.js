@@ -6,29 +6,35 @@ const classSchema = new mongoose.Schema(
       type: mongoose.Schema.ObjectId,
       ref: "User"
     },
-    name: {
+    title: {
       type: String,
       required: [true, "A class must have a name "],
-      unique: true,
       trim: true,
-      maxlength: [
-        40,
-        "A lesson name must have less or equal then 40 characters"
-      ],
-      minlength: [5, "A lesson name have more or equal then 10 characters"]
-      //   validate: [validator.isAlpha, 'A Tour name must be a character']
+      minlength: [5, "A lesson name have more or equal then 5 characters"]
+     
     },
 
-    location: String,
+    duration: String,
 
-    summary: {
+    aboutClass: {
       type: String,
       require: [true, "A class must have a summary "]
     },
-    description: {
+
+    resources: {
       type: String,
-      require: [true, "A class must have a description "]
+      
     },
+    enrolled: {
+      type: Boolean,
+      
+    },
+    
+    students: {
+      type: Boolean,
+      
+    },
+
     video:{
         type: String,
         require: [true, "please upload a video for the class"]
@@ -58,23 +64,7 @@ classSchema.pre(/^find/, function(next){
   });
   next()
 })
-// classSchema.pre(/^find/, function(next){
-//   this.populate({
-//     path:'user',
-//     select: '-__v -passwordchangedat -datecreated -email'
-//   });
-//   next()
-// })
 
-
-
-//  virtual populate to populate the tour model with reviews
-// classSchema.virtual('class', {
-//     ref: 'User',
-//     foreignField: 'class',
-//     localField: '_id',
-    
-//   });
 
 const Class = mongoose.model("Class", classSchema);
 

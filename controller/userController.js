@@ -1,6 +1,4 @@
-const User = require('../models/userModel');
-
-
+const User = require("../models/userModel");
 
 const filterObj = (obj, ...allowedFields) => {
   const newObj = {};
@@ -10,37 +8,39 @@ const filterObj = (obj, ...allowedFields) => {
   return newObj;
 };
 
-
-
 exports.getAllUsers = async (req, res) => {
-    try {
-      const users = await User.find();
-      res.status(200).json({
-        status: 'success',
-        results: users.length,              
-        data: {
-          users
-        }
-      });
-    } catch (err) {
-      res.status(500).json({
-        status: 'error',
-        msg: err.message
-      });
-    }
-  };
-
-
-exports.changeUserRole = async (req, res)=>{
   try {
-    if(!req.body.role) return res.status(403).json({msg:'please update role'})
+    const users = await User.find();
+    res.status(200).json({
+      status: "success",
+      results: users.length,
+      data: {
+        users
+      }
+    });
+  } catch (err) {
+    res.status(500).json({
+      status: "error",
+      msg: err.message
+    });
+  }
+};
 
-    const user = await User.findByIdAndUpdate(req.params.id, {
-      role: req.body.role
-    },{
-      new: true,
-      runValidators: true
-    })
+exports.changeUserRole = async (req, res) => {
+  try {
+    if (!req.body.role)
+      return res.status(403).json({ msg: "please update role" });
+
+    const user = await User.findByIdAndUpdate(
+      req.params.id,
+      {
+        role: req.body.role
+      },
+      {
+        new: true,
+        runValidators: true
+      }
+    );
 
     res.status(200).json({
       status: "success",
@@ -49,14 +49,13 @@ exports.changeUserRole = async (req, res)=>{
         user
       }
     });
-
   } catch (err) {
     res.status(500).json({
-      status: 'error',
+      status: "error",
       msg: err.message
     });
   }
-}
+};
 
 exports.getUserById = async (req, res) => {
   try {
@@ -75,51 +74,62 @@ exports.getUserById = async (req, res) => {
   }
 };
 
-
-exports.getMe = async(req,res)=>{
+exports.getMe = async (req, res) => {
   try {
     const user = await User.find(req.user._id);
     res.status(200).json({
-      status: 'success',
-                
+      status: "success",
+
       data: {
         user
       }
     });
   } catch (err) {
     res.status(500).json({
-      status: 'error',
+      status: "error",
       msg: err.message
     });
   }
-}
+};
 
-exports.updateMe = async(req,res)=>{
+exports.updateMe = async (req, res) => {
   try {
-    if(req.body.password || req.body.passwordConfirm){
+    if (req.body.password || req.body.passwordConfirm) {
       return res.status(400).json({
         msg:
-          'This route is not for password update please use /updateMypassword'
+          "This route is not for password update please use /updateMypassword"
       });
     }
 
-    const filterBody = filterObj(req.body, 'name', 'email');
+    const filterBody = filterObj(
+      req.body,
+      "name",
+      "email",
+      "photo",
+      "bio",
+      "location",
+      "youtube",
+      "twitter",
+      "facebook",
+      "linkedin",
+      "instagram",
+      "phoneNUmber"
+    );
     const updatedUser = await User.findByIdAndUpdate(req.user._id, filterBody, {
       new: true,
       runValidators: true
     });
 
     res.status(200).json({
-      status: 'success',
+      status: "success",
       data: {
         user: updatedUser
       }
     });
-
   } catch (err) {
     res.status(500).json({
-      status: 'error',
+      status: "error",
       msg: err.message
     });
   }
-}
+};

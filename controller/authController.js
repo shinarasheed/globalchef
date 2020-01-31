@@ -1,6 +1,7 @@
 const User = require('../models/userModel')
 const Jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
+const gravatar = require('gravatar')
 
 exports.signUp = async (req, res)=>{
 
@@ -12,12 +13,21 @@ exports.signUp = async (req, res)=>{
             return res.status(401).json({msg: 'you can not use your name as password'})
             
         }
+
+        // get user gravatar
+        const {name, email, password} = req.body
+
+      const avatar = gravatar.url(email, {
+        s: "200",
+        r: "pg",
+        d: "mm"
+      });
        
         const newUser = await User.create({
-            name:req.body.name,
-            email: req.body.email,
-            password: req.body.password,
-            passwordConfirm: req.body.passwordConfirm,
+            name,
+            email,
+            password,
+            avatar
         });
 
         
@@ -28,9 +38,7 @@ exports.signUp = async (req, res)=>{
         res.status(201).json({
             status:'success',
             token,
-            data:{
-                user: newUser
-            }
+           
         })
 
 

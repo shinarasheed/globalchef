@@ -21,19 +21,18 @@ exports.getAllClass = async (req, res) => {
 
 exports.createClass = async (req, res) => {
   try {
-    const user = await User.findById(req.user.id);
+    // const user = await User.findById(req.user.id);
     const newLesson = await Class.create({
-      name: req.body.name,
-      location: req.body.location,
-      summary: req.body.summary,
-      description: req.body.description,
+      title: req.body.title,
+      duration: req.body.duration,
+      aboutClass: req.body.aboutClass,
+      resources: req.body.resources,
       video: req.body.video,
       coverImage: req.body.coverImage,
       user: req.user.id
     });
     res.status(201).json({
       status: "success",
-      createBy: user,
       data: {
         lesson: newLesson
       }
