@@ -37,7 +37,7 @@ const Enrolled = () => {
                   </li>
                   <li>
                     <img src={require("../assets/images/user.png")} alt="" />
-                    <Link>Edit Profile</Link>
+                    <Link to="/profile">Edit Profile</Link>
                   </li>
                   <li>
                     <img

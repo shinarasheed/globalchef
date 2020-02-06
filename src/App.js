@@ -13,6 +13,8 @@ import Learning from "./components/Learning/Learning";
 import { ThemeProvider } from "@chakra-ui/core";
 import Enrolled from "./components/Enrolled";
 import SavedClasses from "./components/SavedClasses/SavedClasses";
+import Profile from "./components/Profile/Profile";
+import "bootstrap/dist/css/bootstrap.css";
 
 function App() {
   return (
@@ -29,6 +31,7 @@ function App() {
             <Route path="/learning" component={Learning} />
             <Route path="/saved" component={SavedClasses} />
             <Route path="/enrolled" component={Enrolled} />
+            <Route path="/profile" component={Profile} />
           </Switch>
           <Footer />
         </ThemeProvider>
