@@ -1,10 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = props => {
+  let navbarClasses = "navbar navbar-expand-lg";
+  console.log(props.location.pathname);
+  if (props.location.pathname !== "/") {
+    navbarClasses = "navbar navbar-expand-lg navbg";
+  }
   return (
     <>
-      <nav className="navbar navbar-expand-lg">
+      <nav className={navbarClasses}>
         <Link className="nav-brand" to="/">
           <img src={require("../assets/images/logo.png")} alt="" />
         </Link>
@@ -28,7 +33,9 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link">About Us</Link>
+              <Link className="nav-link" to="/">
+                About Us
+              </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/classes">
@@ -36,7 +43,9 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link">Contact Us</Link>
+              <Link className="nav-link" to="/">
+                Contact Us
+              </Link>
             </li>
           </ul>
           <ul className="navbar-nav mt-2 mt-lg-0 signup">
@@ -61,4 +70,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default withRouter(Navbar);

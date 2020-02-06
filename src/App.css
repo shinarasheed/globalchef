@@ -8,6 +8,10 @@ nav {
   background-color: rgba(0, 0, 0, 0.4) !important;
 }
 
+.navbg {
+  background-color: red;
+}
+
 nav a.nav-brand img {
   width: 205px;
   height: 60px;
