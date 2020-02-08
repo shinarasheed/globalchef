@@ -14,7 +14,10 @@ const classSchema = new mongoose.Schema(
      
     },
 
-    duration: String,
+    duration:{
+      type: String,
+      required: [true, " A class must have a duration"]
+    },
 
     aboutClass: {
       type: String,
@@ -25,15 +28,10 @@ const classSchema = new mongoose.Schema(
       type: String,
       
     },
-    enrolled: {
-      type: Boolean,
+    enrolled: [
+     { type: Boolean}
       
-    },
-    
-    students: {
-      type: Boolean,
-      
-    },
+  ],
 
     video:{
         type: String,

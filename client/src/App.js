@@ -15,7 +15,8 @@ import Contact from "./components/Contact/Contact";
 import Enrolled from "./components/Enrolled";
 import Alert from "./components/Alert";
 import setAuthToken from './utills/setAuthToken';
-import PrivateRoute from './components/PrivateRoute'
+import PrivateRoute from './components/PrivateRoute';
+import Profile from "./components/Profile/Profile";
 // Redux
 import { Provider } from "react-redux";
 import store from "./store";
@@ -47,6 +48,7 @@ function App() {
               <PrivateRoute exact path="/resources" component={Resources} />
               <PrivateRoute exact path="/saved" component={Contact} />
               <PrivateRoute exact path="/enrolled" component={Enrolled} />
+              <PrivateRoute exact path="/profile" component={Profile} />
             </Switch>
             <Footer />
           </ThemeProvider>

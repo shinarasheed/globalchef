@@ -7,3 +7,5 @@ export const AUTH_ERROR= ' AUTH_ERROR';
 export const LOGIN_SUCCESS= ' LOGIN_SUCCESS';
 export const LOGIN_FAIL= ' LOGIN_FAIL';
 export const LOG_OUT= ' LOG_OUT';
+export const GET_CLASS= ' GET_CLASS';
+export const CLASS_ERROR= ' CLASS_ERROR';

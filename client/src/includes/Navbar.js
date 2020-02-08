@@ -43,7 +43,7 @@ const Navbar = ({auth: { isAuthenticated, loading, user} ,logout}) => {
       </li>
 
       <li className="nav-item">
-        <Link className="nav-link" to="/enrolled">
+        <Link className="nav-link" to="/profile">
           <div className="row">
             <div className="col">
             {user && user.name.split(' ')[0]}

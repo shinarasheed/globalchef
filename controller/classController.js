@@ -3,18 +3,12 @@ const User = require("../models/userModel");
 
 exports.getAllClass = async (req, res) => {
   try {
-    const lesson = await Class.find();
-    res.status(200).json({
-      status: "success",
-      NumOFclasses: lesson.length,
-      data: {
-        lesson
-      }
-    });
+    const lessons = await Class.find();
+    res.status(200).json(lessons);
   } catch (err) {
     res.status(500).json({
       status: "failed",
-      message: err.message
+      msg: err.message
     });
   }
 };
@@ -31,6 +25,9 @@ exports.createClass = async (req, res) => {
       coverImage: req.body.coverImage,
       user: req.user.id
     });
+
+    console.log(newLesson);
+    
     res.status(201).json({
       status: "success",
       data: {

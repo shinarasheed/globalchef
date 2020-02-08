@@ -21,7 +21,7 @@ const Signin = ({ login, isAuthenticated }) => {
   };
 
   if(isAuthenticated){
-    return <Redirect to="/enrolled"/>
+    return <Redirect to="/profile"/>
   }
   return (
     <>
