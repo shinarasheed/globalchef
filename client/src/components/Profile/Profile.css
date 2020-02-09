@@ -1,0 +1,96 @@
+@supports (-moz-appearance: none) {
+  select {
+    -moz-appearance: none !important;
+    background: #fff
+      url("data:image/gif;base64,R0lGODlhBgAGAKEDAFVVVX9/f9TU1CgmNyH5BAEKAAMALAAAAAAGAAYAAAIODA4hCDKWxlhNvmCnGwUAOw==")
+      right center no-repeat !important;
+    background-position: calc(100% - 5px) center !important;
+  }
+}
+
+#profileFirstSection {
+  background-color: #ddd;
+}
+
+#profileFirstSection img.babe_pic {
+  width: 100%;
+}
+
+#profileFirstSection .col-md-3 {
+  background-color: #fff;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#profileFirstSection .col-md-3 .col-md-6 {
+  margin: auto;
+}
+
+#profileFirstSection .col-md-3 .col-md-8 {
+  margin: auto;
+}
+
+#profileFirstSection .col-md-3 .col-md-6 p {
+  text-align: center;
+}
+
+#profileFirstSection .col-md-3 ul {
+  display: block;
+  margin: auto;
+  list-style: none;
+  padding-left: 0;
+}
+
+#profileFirstSection .col-md-3 ul li {
+  padding-bottom: 20px;
+  padding-left: 10px;
+}
+
+#profileFirstSection .col-md-3 ul li img {
+  padding-right: 20px;
+}
+
+#profileFirstSection .col-md-3 ul li a {
+  color: #000;
+  text-decoration: none;
+}
+
+#profileFirstSection .col-md-9 .row.parent {
+  justify-content: center;
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+
+#profileFirstSection .col-md-9 form .row {
+  margin-bottom: 30px;
+}
+
+#profileFirstSection .col-md-9 form label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#profileFirstSection .col-md-9 form p {
+  font-size: 12px;
+}
+
+#profileFirstSection .col-md-9 form h1 {
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+#profileFirstSection .col-md-9 form button {
+  background: red;
+  color: #fff;
+  border: none;
+  padding: 3px 46px;
+  font-size: 20px;
+  border-radius: 4px;
+  display: block;
+  margin-left: auto;
+}
+
+#profileFirstSection .col-md-9 form .row:nth-child(5) {
+  margin-bottom: 20px;
+}

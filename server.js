@@ -9,8 +9,8 @@ connectDB();
 
 console.log(process.env.NODE_ENV);
 
-const port = process.env.PORT; 
+const port = process.env.PORT;
 
-app.listen(port, ()=>{
-    console.log(`Server stated on port  ${port}`);
+app.listen(port, () => {
+  console.log(`Server stated on port  ${port}`);
 });
