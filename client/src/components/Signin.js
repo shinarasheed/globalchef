@@ -39,22 +39,27 @@ const Signin = ({ login, isAuthenticated }) => {
             </div>
             <hr className="full_line" />
 
-            <form onSubmit={e=> onSubmit(e)}>
+            <form onSubmit={e => onSubmit(e)}>
               <div className="parent_div">
-                <input type="email" placeholder="Email" required name='email' value={email} onChange={e => onChange(e)} />
-                <input type="password" placeholder="Password" required name='password' value={password} onChange={e => onChange(e)} />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  required
+                  name="email"
+                  value={email}
+                  onChange={e => onChange(e)}
+                />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  required
+                  name="password"
+                  value={password}
+                  onChange={e => onChange(e)}
+                />
                 <div>
                   <button type="submit">Log In</button>
                 </div>
-                <h1>or</h1>
-
-                <button type="submit" className="facebook">
-                  Continue with Facebook
-                </button>
-                <button type="submit">Continue with Google</button>
-                <h3>
-                  or <span>Forgotten Password?</span>
-                </h3>
 
                 <div>
                   <hr />
@@ -71,9 +76,8 @@ const Signin = ({ login, isAuthenticated }) => {
   );
 };
 
-const mapStateToProps = state=>({
-  isAuthenticated: state.auth.isAuthenticated,
-  
-})
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated
+});
 
-export default connect(mapStateToProps, {login})(Signin);
+export default connect(mapStateToProps, { login })(Signin);

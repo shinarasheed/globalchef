@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Link,  Redirect } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { register } from "../actions/auth";
 
-const Signup = ({ register , isAuthenticated}) => {
+const Signup = ({ register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -11,7 +11,7 @@ const Signup = ({ register , isAuthenticated}) => {
     newsLetters: false
   });
 
-  const { name, email, password , newsLetters} = formData;
+  const { name, email, password, newsLetters } = formData;
 
   const onChange = e =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -19,7 +19,7 @@ const Signup = ({ register , isAuthenticated}) => {
   const onSubmit = e => {
     e.preventDefault();
     // console.log(formData);
-    
+
     register({ name, email, password, newsLetters });
   };
 
@@ -43,22 +43,50 @@ const Signup = ({ register , isAuthenticated}) => {
             </div>
             <hr className="full_line" />
 
-            <form onSubmit={e=> onSubmit(e)} >
-            <div className="parent_div">
-                <input type="text" placeholder="Full Name" name="name" value={name} onChange={e => onChange(e)} required />
+            <form onSubmit={e => onSubmit(e)}>
+              <div className="parent_div">
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  name="name"
+                  value={name}
+                  onChange={e => onChange(e)}
+                  required
+                />
 
-                <input type="email" placeholder="Email Address"  name="email" value={email} onChange={e => onChange(e)} required/>
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  name="email"
+                  value={email}
+                  onChange={e => onChange(e)}
+                  required
+                />
 
                 {/* <input type="text" placeholder="Phone Number" /> */}
 
-                <input type="password" placeholder="Password" name="password" value={password} onChange={e => onChange(e)} required />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  name="password"
+                  value={password}
+                  onChange={e => onChange(e)}
+                  required
+                />
 
                 <div className="checkbox pt-3">
-                <p> <input type="checkbox" name="newsLetters" checked={newsLetters} value={newsLetters} onChange={e=> {
-                    // e.target.name= e.target.checked
-                    setFormData({...formData, newsLetters: !newsLetters})
-                  }}
-                  />{" "}
+                  <p>
+                    {" "}
+                    <input
+                      type="checkbox"
+                      name="newsLetters"
+                      checked={newsLetters}
+                      value={newsLetters}
+                      onChange={e => {
+                        // e.target.name= e.target.checked
+                        setFormData({ ...formData, newsLetters: !newsLetters });
+                      }}
+                    />{" "}
                     Yes, I want to get the most out of GlobalChef by <br />
                     recieving emails with exclusive deals, personal <br />
                     recommendations and learning tips
@@ -71,12 +99,6 @@ const Signup = ({ register , isAuthenticated}) => {
                     Policy
                   </p>
                 </div>
-                <h1>or</h1>
-
-                <button type="submit" className="facebook">
-                  Continue with Facebook
-                </button>
-                <button type="submit">Continue with Google</button>
 
                 <div>
                   <hr />
