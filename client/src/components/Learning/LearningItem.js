@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const LearningItem = ({
   lesson: {
+    _id,
      title,
     duration,
     coverImage,
@@ -12,7 +13,7 @@ const LearningItem = ({
   return (
     <>
       <div className="col-md-3 image_div mt-3">
-          <Link to="/classes">
+          <Link to={`/classes/${_id}`}>
           <img
           src={require("../../assets/images/img5.png")}
           alt=""

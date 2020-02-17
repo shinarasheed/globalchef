@@ -6,14 +6,17 @@ import {
   LOGIN_SUCCESS,
   LOGIN_FAIL,
   LOG_OUT,
-  DELETE_ACCOUNT
+  DELETE_ACCOUNT,
+  EDIT_PROFILE,
+  PROFILE_ERROR
 } from "../actions/types";
 
 const initialState = {
   token: localStorage.getItem("token"),
   isAuthenticated: null,
   loading: true,
-  user: null
+  user: null,
+  error:{}
 };
 
 export default function(state = initialState, action) {
@@ -21,6 +24,7 @@ export default function(state = initialState, action) {
 
   switch (type) {
     case USER_LOADED:
+    case EDIT_PROFILE:
       return {
         ...state,
         isAuthenticated: true,
@@ -48,7 +52,13 @@ export default function(state = initialState, action) {
         loading: false,
         user: null
       };
-
+    case PROFILE_ERROR:
+      return {
+        ...state,
+        error: payload,
+        loading: false,
+        
+      }
     default:
       return state;
   }

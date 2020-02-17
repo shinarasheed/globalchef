@@ -44,7 +44,7 @@ function App() {
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/signin" component={Signin} />
               <Route exact path="/learning" component={Learning} />
-              <PrivateRoute exact path="/classes" component={Classes} />
+              <PrivateRoute exact path="/classes/:id" component={Classes} />
               <PrivateRoute exact path="/resources" component={Resources} />
               <PrivateRoute exact path="/saved" component={Contact} />
               <PrivateRoute exact path="/enrolled" component={Enrolled} />

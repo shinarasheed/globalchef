@@ -109,17 +109,12 @@ exports.updateMe = async (req, res) => {
       "instagram",
       "phoneNUmber"
     );
-    const updatedUser = await User.findByIdAndUpdate(req.user._id, filterBody, {
+    const user = await User.findByIdAndUpdate(req.user._id, filterBody, {
       new: true,
       runValidators: true
     });
 
-    res.status(200).json({
-      status: "success",
-      data: {
-        user: updatedUser
-      }
-    });
+    res.status(200).json(user);
   } catch (err) {
     res.status(500).json({
       status: "error",

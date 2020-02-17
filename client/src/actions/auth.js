@@ -9,6 +9,8 @@ import {
     LOGIN_SUCCESS,
     LOGIN_FAIL,
     LOG_OUT,
+    EDIT_PROFILE,
+    PROFILE_ERROR
 } from './types';
 
 
@@ -103,4 +105,37 @@ export const login = (email, password) => async dispatch => {
 export const logout =()=> dispatch=>{
     dispatch({type: LOG_OUT});
 
+}
+
+
+// edit user 
+
+export const editProfile = (formData, history)=> async dispatch => {
+    try {
+        const config = {
+            headers: {
+              "Content-Type": "application/json"
+            }
+          };
+        const res = await axios.patch("/api/users/updateMe", formData, config);
+        dispatch({
+            type:EDIT_PROFILE,
+            payload: res.data
+        })
+        dispatch(setAlert( "Profile Updated" , "success" ));
+        
+    } catch (err) {
+        const errors = err.response.data.errors;
+        if (errors) {
+            errors.forEach(error => dispatch(setAlert(error.msg, "danger")));
+          }
+
+        console.log(err);
+        
+
+          dispatch({
+            type: PROFILE_ERROR,
+            payload: { msg: err.response.data.errors  }
+          });
+    }
 }

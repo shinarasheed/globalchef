@@ -60,7 +60,7 @@ const UserSchema = new mongoose.Schema({
   },
 
   phoneNUmber:{
-    type: Number
+    type: String
   },
 
   youtube: {

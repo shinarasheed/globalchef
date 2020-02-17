@@ -25,7 +25,7 @@ const Signup = ({ register , isAuthenticated}) => {
 
   
  if(isAuthenticated){
-  return <Redirect to="/profile"/>
+  return <Redirect to="/"/>
 }
   return (
     <>

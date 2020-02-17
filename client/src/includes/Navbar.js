@@ -1,8 +1,17 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import {logout} from '../actions/auth'
+import {logout} from '../actions/auth';
+
 const Navbar = ({auth: { isAuthenticated, loading, user} ,logout}) => {
+
+  const userPhoto = (
+    <img src={user && user.photo } alt="user"style={{width: '40px'}} className="round-img img-fluid" />
+  )
+
+  const userDefault=(
+    <img src={user && user.avatar} alt="user" style={{width: '40px'}} className="round-img" />
+  )
 
   const authLinks = (
    
@@ -45,11 +54,12 @@ const Navbar = ({auth: { isAuthenticated, loading, user} ,logout}) => {
       <li className="nav-item">
         <Link className="nav-link" to="/profile">
           <div className="row">
-            <div className="col">
-            {user && user.name.split(' ')[0]}
+            <div className="col ">
+  <span className="welcome">Hi,{" "}{user && user.name.split(' ')[0]}</span>
             </div>
             <div className="col pb-2">
-            <img src={user && user.avatar} alt="user" style={{width: '50px'}} className="round-img"/>
+            
+            {user && user.photo ? userPhoto : userDefault} 
             </div>
            
             </div>
@@ -129,7 +139,7 @@ const Navbar = ({auth: { isAuthenticated, loading, user} ,logout}) => {
 
   
 
-        <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <div className="collapse navbar-collapse" id="navbarTogglerDemo02 pt-3">
         {!loading &&  (<Fragment>{isAuthenticated? authLinks: guestLinks}</Fragment>)}
          
         </div>

@@ -26,7 +26,7 @@ exports.createClass = async (req, res) => {
       user: req.user.id
     });
 
-    console.log(newLesson);
+    // console.log(newLesson);
     
     res.status(201).json({
       status: "success",
@@ -45,12 +45,8 @@ exports.createClass = async (req, res) => {
 exports.getClassById = async (req, res) => {
   try {
     const lesson = await Class.findById(req.params.id);
-    res.status(201).json({
-      status: "success",
-      data: {
-        lesson
-      }
-    });
+    res.status(200).json(lesson);
+    
   } catch (err) {
     res.status(500).json({
       status: "failed",
