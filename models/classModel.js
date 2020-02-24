@@ -58,7 +58,7 @@ const classSchema = new mongoose.Schema(
 classSchema.pre(/^find/, function(next){
   this.populate({
     path:'user',
-    select: '-__v -passwordchangedat -datecreated -email'
+    
   });
   next()
 })

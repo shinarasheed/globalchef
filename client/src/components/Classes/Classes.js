@@ -3,11 +3,20 @@ import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/core";
 import { connect } from "react-redux";
 import {getClassBYId} from '../../actions/classes'
 
-const Classes = ({classbyId:{class1 , loading} , getClassBYId, match}) => {
+const Classes = ({classbyId:{class1 , loading} , getClassBYId, match, auth:{user}}) => {
   useEffect(() => {
     getClassBYId(match.params.id);
     // eslint-disable-next-line
   }, [getClassBYId]);
+
+  
+  // const userPhoto = (
+  //   <img src={user && user.photo } alt="user" className="babe_pic" />
+  // )
+
+  // const userDefault=(
+  //   <img src={user&& user.avatar} alt="user" className="babe_pic" />
+  // )
 
   return (
     <>
@@ -87,13 +96,14 @@ const Classes = ({classbyId:{class1 , loading} , getClassBYId, match}) => {
                       <div className="col-md-4 tutor_div">
                         <h5>About the tutor</h5>
                         <img
-                          src={require("../../assets/images/classeschef.png")}
+                          src={class1.user.photo}
                           alt=""
+                          style={{width: '400px'}} className="round-img img-fluid"
                         />
                       </div>
                       <div className="col-md-8">
-                        <p>Chef Majekadegbe Fishly</p>
-                        <span>Lagos Nigeria</span>
+                        <p>{class1.user.name}</p>
+                        <span>{class1.user.location}</span>
                         <p>
                           Olayemi Ibikunle has 2 years of experience working
                           in five private <br /> schools across in Nigeria.
@@ -143,7 +153,7 @@ const Classes = ({classbyId:{class1 , loading} , getClassBYId, match}) => {
                 </div>
               </TabPanel>
               <TabPanel>
-                <div className="row">
+                {/* <div className="row">
                   <div className="col-md-12 about_class">
                     <h4>About this class</h4>
                     <p>
@@ -164,13 +174,13 @@ const Classes = ({classbyId:{class1 , loading} , getClassBYId, match}) => {
                       <div className="col-md-4 tutor_div">
                         <h5>About the tutor</h5>
                         <img
-                          src={require("../../assets/images/classeschef.png")}
+                          src={user.photo}
                           alt=""
                         />
                       </div>
                       <div className="col-md-8">
-                        <p>Chef Majekadegbe Fishly</p>
-                        <span>Lagos Nigeria</span>
+                      <p>Chef {user.name}</p>
+                        <span>{user.location}</span>
                         <p>
                           Olayemi Ibikunle has 2 years of experience working
                           in five private <br /> schools across in Nigeria.
@@ -180,7 +190,7 @@ const Classes = ({classbyId:{class1 , loading} , getClassBYId, match}) => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </TabPanel>
             </TabPanels>
           </Tabs>
@@ -233,7 +243,8 @@ const Classes = ({classbyId:{class1 , loading} , getClassBYId, match}) => {
 };
 
 const mapStateToProps = state =>({
-  classbyId: state.classList
+  classbyId: state.classList,
+  auth: state.auth
 })
 
 export default connect(mapStateToProps, {getClassBYId}) (Classes);
