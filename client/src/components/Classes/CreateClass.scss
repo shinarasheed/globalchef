@@ -1,0 +1,61 @@
+@supports (-moz-appearance: none) {
+  select {
+    -moz-appearance: none !important;
+    background: #fff
+      url("data:image/gif;base64,R0lGODlhBgAGAKEDAFVVVX9/f9TU1CgmNyH5BAEKAAMALAAAAAAGAAYAAAIODA4hCDKWxlhNvmCnGwUAOw==")
+      right center no-repeat !important;
+    background-position: calc(100% - 5px) center !important;
+  }
+}
+
+textarea {
+  user-select: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  padding: 0;
+  margin: 0;
+}
+
+#createClass {
+  background-color: #ddd;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#createClassFirstSection .row {
+  justify-content: center;
+}
+
+#createClassFirstSection {
+  label {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 17px;
+  }
+
+  input {
+    margin-bottom: 20px;
+    border-radius: 0 !important;
+    border: none;
+    border-color: none !important;
+  }
+  textarea {
+    border: none;
+    margin-bottom: 20px !important;
+    border-radius: 0 !important;
+  }
+
+  input[type="file"] {
+    border: none;
+    padding-bottom: 35px !important;
+    background-color: transparent;
+    color: red;
+  }
+}
