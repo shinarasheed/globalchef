@@ -76,10 +76,10 @@ const Footer = () => {
                   Email: info@globalchef.com.ng
                 </li>
               </ul>
-              <form>
+              {/* <form>
                 <input type="text" placeholder="Email Address" />
                 <button type="submit">Subscribe</button>
-              </form>
+              </form> */}
             </div>
 
             <div className="col-md-2">
