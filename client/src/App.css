@@ -49,6 +49,10 @@ nav ul li a.signup:hover {
 }
 
 .nav-link {
+  padding: 0 !important;
+}
+
+.nav-link {
   color: #fff !important;
   font-weight: 600 !important;
 }
