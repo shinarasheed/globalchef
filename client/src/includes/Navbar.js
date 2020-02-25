@@ -44,11 +44,16 @@ const Navbar = ({ auth: { isAuthenticated, loading, user }, logout }) => {
           Classes
         </Link>
       </li>
-      {/* <li className="nav-item">
-        <Link className="nav-link" to="/saved">
-          Saved
-        </Link>
-      </li> */}
+      <li className="nav-item">
+
+        {user && user.role !== "admin" ? (''): (<Link className="nav-link" to="/createclass">
+          Create Class
+        </Link> ) }
+        {user && user.role !== "instructor" ? (''): (<Link className="nav-link" to="/createclass">
+          Create Class
+        </Link> ) }
+        
+      </li>
 
       <div className="navbar-nav mt-2 mt-lg-0 signup">
         <li className="nav-item active">
@@ -109,6 +114,7 @@ const Navbar = ({ auth: { isAuthenticated, loading, user }, logout }) => {
       </div>
     </ul>
   );
+ 
 
   return (
     <>

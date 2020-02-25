@@ -27,13 +27,8 @@ exports.createClass = async (req, res) => {
     });
 
     // console.log(newLesson);
-    
-    res.status(201).json({
-      status: "success",
-      data: {
-        lesson: newLesson
-      }
-    });
+    res.status(200).json(newLesson);
+   
   } catch (err) {
     res.status(500).json({
       status: "failed",

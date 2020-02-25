@@ -15,13 +15,13 @@ const LearningItem = ({
       <div className="col-md-3 image_div mt-3">
           <Link to={`/classes/${_id}`}>
           <img
-          src={require("../../assets/images/img5.png")}
+          src={coverImage}
           alt=""
           className="food_image"
         />
           </Link>
         
-        <div>
+        <div className="p-2">
           <span>300 students</span>
   <span>{duration}</span>
         </div>

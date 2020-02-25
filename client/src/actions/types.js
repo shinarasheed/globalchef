@@ -12,3 +12,4 @@ export const GET_CLASSBYID= ' GET_CLASSBYID';
 export const CLASS_ERROR= ' CLASS_ERROR';
 export const EDIT_PROFILE= ' EDIT_PROFILE';
 export const PROFILE_ERROR= ' PROFILE_ERROR';
+export const CREATE_CLASS= ' CREATE_CLASS';

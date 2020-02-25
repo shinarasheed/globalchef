@@ -2,6 +2,7 @@ import React, {useEffect} from "react";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/core";
 import { connect } from "react-redux";
 import {getClassBYId} from '../../actions/classes'
+import VideoPlayer from '../../components/Classes/VideoPlayer'
 
 const Classes = ({classbyId:{class1 , loading} , getClassBYId, match, auth:{user}}) => {
   useEffect(() => {
@@ -27,27 +28,24 @@ const Classes = ({classbyId:{class1 , loading} , getClassBYId, match, auth:{user
       <div id="contactFirstSection" className="container-fluid">
       <div className="row row_1">
         <div className="col-md-12">
-          <h4>Learn how to cook rice with fried shrimps</h4>
+     <h4>{class1.title}</h4>
           <div>
             <p>
               <img src={require("../../assets/images/chefcap.png")} alt="" />
-              <span>Chef Majekadegbe Fishly</span>
+     <span>Chef {class1.user.name}</span>
             </p>
             <p>
               <img src={require("../../assets/images/clock.png")} alt="" />
-              <span> 1hr 30min</span>
+     <span>{class1.duration}</span>
             </p>
           </div>
         </div>
       </div>
       <div className="row row_2">
-        <div className="col-md-12">
+        <div className="col-md-8 mx-auto">
           <div id="row_2_overlay"></div>
 
-          <img
-            src={require("../../assets/images/cookingvideo_small.png")}
-            alt=""
-          />
+          <VideoPlayer url={class1.video}/>
         </div>
       </div>
       {/* <div className="row row_3">
@@ -70,7 +68,7 @@ const Classes = ({classbyId:{class1 , loading} , getClassBYId, match, auth:{user
                 About
               </Tab>
               <Tab>Resources</Tab>
-              <Tab>Reviews</Tab>
+           
             </TabList>
 
             <TabPanels>
@@ -79,14 +77,7 @@ const Classes = ({classbyId:{class1 , loading} , getClassBYId, match, auth:{user
                   <div className="col-md-12 about_class">
                     <h4>About this class</h4>
                     <p>
-                      Bold, Delicious and packed with flavour. Who doesn't
-                      love enchiladas? In this fast-paced class, geared <br />
-                      towards the beginner, you'll learn the basics of making
-                      green chicken enchiladas with an array of <br />
-                      traditional ingredients, using the time-honored(read:
-                      secret) techniques of the Mexican kitchen, from <br />
-                      charring on a comal to frying sauces, on your way to
-                      making luscious, deep-flavored enchiladas.
+                      {class1.aboutClass}
                     </p>
                   </div>
                 </div>
@@ -105,10 +96,7 @@ const Classes = ({classbyId:{class1 , loading} , getClassBYId, match, auth:{user
                         <p>{class1.user.name}</p>
                         <span>{class1.user.location}</span>
                         <p>
-                          Olayemi Ibikunle has 2 years of experience working
-                          in five private <br /> schools across in Nigeria.
-                          She earned a B.Ed and a Masters in <br /> Teaching
-                          and Learning from Harvard University
+                          {class1.user.bio}
                         </p>
                       </div>
                     </div>
@@ -127,8 +115,9 @@ const Classes = ({classbyId:{class1 , loading} , getClassBYId, match, auth:{user
                     </div>
                     <div>
                       <p className="download">
-                        You can download the MP4 file as well as PDF file
+                        You can  view and download the MP4 and  PDF file
                         below
+                        
                       </p>
                     </div>
                     <div>
@@ -137,7 +126,7 @@ const Classes = ({classbyId:{class1 , loading} , getClassBYId, match, auth:{user
                         alt=""
                       />
                       <span>
-                        Learn how to cook rice spiced with fried schrimps.MP4
+                      <a href={class1.video} target="_blank" rel="noopener noreferrer" >{class1.title}.MP4</a> 
                       </span>
                     </div>
                     <div>
@@ -146,7 +135,7 @@ const Classes = ({classbyId:{class1 , loading} , getClassBYId, match, auth:{user
                         alt=""
                       />
                       <span>
-                        Learn how to cook rice spiced with fried schrimps.PDF
+                        <a href={class1.resources} target="_blank" rel="noopener noreferrer" >{class1.title}.PDF</a> 
                       </span>
                     </div>
                   </div>

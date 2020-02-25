@@ -12,6 +12,7 @@ const Profile = ({ auth: { user, loading }, editProfile }) => {
     email: "",
     location: "",
     photo: "",
+    bio: "",
     phoneNUmber: "",
     twitter: "",
     facebook: ""
@@ -23,6 +24,7 @@ const Profile = ({ auth: { user, loading }, editProfile }) => {
     setFormData({
       name: loading || !user.name ? "" : user.name,
       email: loading || !user.email ? "" : user.email,
+      bio: loading || !user.bio ? "" : user.bio,
       location: loading || !user.location ? "" : user.location,
       photo: loading || !user.photo ? "" : user.photo,
       phoneNUmber: loading || !user.phoneNUmber ? "" : user.phoneNUmber,
@@ -41,6 +43,7 @@ const Profile = ({ auth: { user, loading }, editProfile }) => {
     email,
     location,
     photo,
+    bio,
     phoneNUmber,
     twitter,
     facebook
@@ -58,7 +61,7 @@ const Profile = ({ auth: { user, loading }, editProfile }) => {
 
   const fileUpload = async e => {
     try {
-      // console.log(e.target.files[0]);
+      console.log(e.target.files[0]);
       const files = e.target.files;
       const data = new FormData();
       data.append("file", files[0]);
@@ -176,6 +179,19 @@ const Profile = ({ auth: { user, loading }, editProfile }) => {
                         <input type="text" className="form-control" />
                       </div> */}
                     </div>
+                    <div className="mb-3">
+                      <label htmlFor="bio">About me</label>
+                      <textarea
+                        name="bio"
+                        value={bio}
+                        id=""
+                        cols="30"
+                        rows="5"
+                        className="form-control"
+                        placeholder="write about yourself"
+                        onChange={e => onChange(e)}
+                      ></textarea>
+                    </div>
                     <div className="row">
                       <div className="col">
                         <label htmlFor="EmailAddress">Email Address</label>
@@ -187,6 +203,7 @@ const Profile = ({ auth: { user, loading }, editProfile }) => {
                           onChange={e => onChange(e)}
                         />
                       </div>
+
                       <div className="col">
                         <label htmlFor="PhoneNumber">Phone Number</label>
                         <input

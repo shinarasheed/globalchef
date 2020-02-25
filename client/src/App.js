@@ -17,6 +17,7 @@ import Alert from "./components/Alert";
 import setAuthToken from "./utills/setAuthToken";
 import PrivateRoute from "./components/PrivateRoute";
 import Profile from "./components/Profile/Profile";
+import VideoPlayer from './components/Classes/VideoPlayer'
 
 // Redux
 import { Provider } from "react-redux";
@@ -44,7 +45,8 @@ function App() {
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/signin" component={Signin} />
               <Route exact path="/learning" component={Learning} />
-              <Route exact path="/createclass" component={CreateClass} />
+              <Route exact path="/video" component={VideoPlayer} />
+              <PrivateRoute exact path="/createclass" component={CreateClass} />
               <PrivateRoute exact path="/classes/:id" component={Classes} />
               <PrivateRoute exact path="/resources" component={Resources} />
               {/* <PrivateRoute exact path="/saved" component={Contact} /> */}
