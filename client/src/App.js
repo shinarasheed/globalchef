@@ -47,8 +47,8 @@ function App() {
               <Route exact path="/createclass" component={CreateClass} />
               <PrivateRoute exact path="/classes/:id" component={Classes} />
               <PrivateRoute exact path="/resources" component={Resources} />
-              <PrivateRoute exact path="/saved" component={Contact} />
-              <PrivateRoute exact path="/enrolled" component={Enrolled} />
+              {/* <PrivateRoute exact path="/saved" component={Contact} /> */}
+              {/* <PrivateRoute exact path="/enrolled" component={Enrolled} /> */}
               <PrivateRoute exact path="/profile" component={Profile} />
             </Switch>
             <Footer />

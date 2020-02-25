@@ -361,7 +361,7 @@ const Landingpage = () => {
       </div>
       <div id="homeSixthSection" className="container-fluid">
         <div className="row parent_row">
-          <div className="col-md-4 form_div">
+          {/* <div className="col-md-4 form_div">
             <div className="row">
               <div className="col-md-6">
                 <p>Get In Touch</p>
@@ -402,7 +402,7 @@ const Landingpage = () => {
               </div>
               <button type="submit">Send</button>
             </form>
-          </div>
+          </div> */}
           <div className="col-md-6 image_div">
             <img
               src={require("../../assets/images/contactimg.png")}
