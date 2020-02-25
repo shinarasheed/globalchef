@@ -13,7 +13,7 @@ nav a.nav-brand img {
   height: 60px;
 }
 
-.round-img{
+.round-img {
   border-radius: 50%;
 }
 
@@ -337,8 +337,9 @@ nav ul li a.signup:hover {
 }
 
 #homeSixthSection img.contact_image {
-  width: 630px;
+  width: 100%;
   height: 580px;
+  display: block;
 }
 
 #homeSixthSection>.row.parent_row {
@@ -390,15 +391,9 @@ nav ul li a.signup:hover {
   margin-bottom: 0;
 }
 
-#homeSixthSection>.row.parent_row {
-  justify-content: flex-end;
-}
-
 #homeSixthSection .col-md-6.image_div {
   text-align: end;
   padding: 0;
-  margin-top: -42px;
-  position: relative;
 }
 
 #homeSixthSection .col-md-6.col-md-6.image_div div {
