@@ -104,7 +104,7 @@ const Classes = ({classbyId:{class1 , loading} , getClassBYId, match, auth:{user
                 </div>
               </TabPanel>
               <TabPanel>
-                <div className="row">
+                <div className="row mb-3">
                   <div className="col-md-12 about_class">
                     <div className="resources">
                       <img
@@ -184,7 +184,7 @@ const Classes = ({classbyId:{class1 , loading} , getClassBYId, match, auth:{user
             </TabPanels>
           </Tabs>
         </div>
-        <div className="col-md-4 food_image">
+        {/* <div className="col-md-4 food_image">
           <h2>Coming up next (Recommended)</h2>
           <div className="row">
             <div className="col-md-6">
@@ -222,7 +222,7 @@ const Classes = ({classbyId:{class1 , loading} , getClassBYId, match, auth:{user
               <span>1hr 30min</span>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
     </>
