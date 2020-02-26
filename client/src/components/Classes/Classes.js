@@ -2,6 +2,7 @@ import React, {useEffect} from "react";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/core";
 import { connect } from "react-redux";
 import {getClassBYId} from '../../actions/classes'
+import Spinner from '../Spinner'
 import VideoPlayer from '../../components/Classes/VideoPlayer'
 
 const Classes = ({classbyId:{class1 , loading} , getClassBYId, match, auth:{user}}) => {
@@ -22,7 +23,7 @@ const Classes = ({classbyId:{class1 , loading} , getClassBYId, match, auth:{user
   return (
     <>
      {class1 === null || loading ? (
-       <h2>loading</h2>
+      <Spinner/>
      ): (
        <>
       <div id="contactFirstSection" className="container-fluid">

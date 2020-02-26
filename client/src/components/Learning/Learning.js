@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { getclasses } from "../../actions/classes";
 import { connect } from "react-redux";
 import LearningItem from './LearningItem'
+import Spinner from '../Spinner'
 
 const Learning = ({ getclasses, classList:{loading,classes }}) => {
   useEffect(() => {
@@ -16,7 +17,7 @@ const Learning = ({ getclasses, classList:{loading,classes }}) => {
   return (
     <>
     
-       { classes.length === 0 || loading? <h1>Loading Please wait</h1>:
+       { classes.length === 0 || loading? <Spinner/>:
        
        <div id="learningFirstSection" className="container-fluid">
         <div className="row parent">

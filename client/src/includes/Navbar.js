@@ -39,11 +39,7 @@ const Navbar = ({ auth: { isAuthenticated, loading, user }, logout }) => {
           Learning
         </Link>
       </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/classes">
-          Classes
-        </Link>
-      </li>
+      
       <li className="nav-item">
 
         {user && user.role !== "admin" ? (''): (<Link className="nav-link" to="/createclass">

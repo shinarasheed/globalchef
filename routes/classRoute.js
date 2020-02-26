@@ -8,7 +8,7 @@ const router = express.Router();
 
 router.delete('/deleteMyClass/:id', authController.protect, authController.restrictTo( 'instructor'), classController.deleteMyClass)
 
-// router.put('/updateMyClass/:id', authController.protect, authController.restrictTo( 'instructor'), classController.updateMyClass)
+router.put('/updateMyClass/:id', authController.protect, authController.restrictTo( 'instructor'), classController.updateMyClass)
 
 router
   .route("/")
