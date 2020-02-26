@@ -121,6 +121,7 @@ const CreateClass = ({createClass, auth:{isAuthenticated, user, loading}, histor
                     className="form-control"
                     name="title"
                     value={title}
+                    required
                     placeholder="Enter the title for your class"
                     onChange={e => onChange(e)}
                   />
@@ -134,6 +135,7 @@ const CreateClass = ({createClass, auth:{isAuthenticated, user, loading}, histor
                     className="form-control"
                     placeholder="Enter the duration for your class"
                     onChange={e => onChange(e)}
+                    required
                   />
                 </div>
                 <div>
@@ -144,6 +146,7 @@ const CreateClass = ({createClass, auth:{isAuthenticated, user, loading}, histor
                     id=""
                     cols="30"
                     rows="5"
+                    required
                     className="form-control"
                     placeholder="write a descrition about your class"
                     onChange={e => onChange(e)}
@@ -159,6 +162,7 @@ const CreateClass = ({createClass, auth:{isAuthenticated, user, loading}, histor
                     id="resources"
                     className="form-control"
                     onChange={fileUpload}
+                    required
                   />
                 </div>
                 <div>
@@ -169,6 +173,7 @@ const CreateClass = ({createClass, auth:{isAuthenticated, user, loading}, histor
                     id="video"
                     className="form-control"
                     onChange={videoUpload}
+                    required
                     
                   />
                 </div>
@@ -181,10 +186,11 @@ const CreateClass = ({createClass, auth:{isAuthenticated, user, loading}, histor
                     name="coverImage"
                     id="coverimage"
                     className="form-control"
+                    required
                     onChange={fileUpload}
                   />
                 </div>
-                <button type="submit">Save Changes</button>
+                <button type="submit">Create Class</button>
               </form>
             </div>
           </div>
