@@ -2,19 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { editProfile, loadUser } from "../../actions/auth";
-<<<<<<< HEAD
-import Spinner from '../Spinner'
-=======
 import Spinner from "../Spinner";
->>>>>>> resolved some conflicts
 import "./Profile.css";
 import { logout } from "../../actions/auth";
 
-<<<<<<< HEAD
-const Profile = ({ auth: { user, loading }, editProfile , logout}) => {
-=======
 const Profile = ({ auth: { user, loading }, editProfile, logout }) => {
->>>>>>> resolved some conflicts
   // console.log(user);
 
   const [formData, setFormData] = useState({
@@ -45,11 +37,7 @@ const Profile = ({ auth: { user, loading }, editProfile, logout }) => {
   }, [loading]);
 
   if (loading) {
-<<<<<<< HEAD
-    return <Spinner/>;
-=======
     return <Spinner />;
->>>>>>> resolved some conflicts
   }
 
   const {
@@ -108,86 +96,67 @@ const Profile = ({ auth: { user, loading }, editProfile, logout }) => {
 
   const adminList = (
     <ul>
-    <li>
-      {user && user.role === "admin"?  <>
-    <img
-      src={require("../../assets/images/settings.png")}
-      alt=""
-    />
-    <Link to="">Update User Role</Link>
-    </> : '' }
-     
-  </li>
+      <li>
+        {user && user.role === "admin" ? (
+          <>
+            <img src={require("../../assets/images/settings.png")} alt="" />
+            <Link to="">Update User Role</Link>
+          </>
+        ) : (
+          ""
+        )}
+      </li>
 
-    <li>
-      <img
-        src={require("../../assets/images/save-icon-silhouette.png")}
-        alt=""
-      />
-      <Link to="/createclass">Create Class</Link>
-    </li>
+      <li>
+        <img
+          src={require("../../assets/images/save-icon-silhouette.png")}
+          alt=""
+        />
+        <Link to="/createclass">Create Class</Link>
+      </li>
 
-    <li>
+      <li>
+        {user && user.role === "admin" ? (
+          <>
+            <img src={require("../../assets/images/blackboard.png")} alt="" />
+            <Link to="">All Classes</Link>
+          </>
+        ) : (
+          <>
+            <img src={require("../../assets/images/blackboard.png")} alt="" />
+            <Link to="">My Classes</Link>
+          </>
+        )}
+      </li>
 
-    {user && user.role === "admin"?  <>
-    <img
-      src={require("../../assets/images/blackboard.png")}
-      alt=""
-    />
-    <Link to="">All Classes</Link>
-    </> : <>
-    <img
-      src={require("../../assets/images/blackboard.png")}
-      alt=""
-    />
-    <Link to="">My Classes</Link>
-    </> }
-      
-    </li>
-    
-    
-    <li>
-      <img
-        src={require("../../assets/images/logout.png")}
-        alt=""
-      />
-       <a onClick={logout} href="#!">
-            Logout
-          </a>
-    </li>
-  </ul>
-  )
+      <li>
+        <img src={require("../../assets/images/logout.png")} alt="" />
+        <a onClick={logout} href="#!">
+          Logout
+        </a>
+      </li>
+    </ul>
+  );
   const userList = (
     <ul>
-    
-    <li>
-      <img
-        src={require("../../assets/images/blackboard.png")}
-        alt=""
-      />
-      <Link to="/learning">Classes </Link>
-    </li>
-    
-    <li>
-      <img
-        src={require("../../assets/images/logout.png")}
-        alt=""
-      />
-       <a onClick={logout} href="#!">
-            Logout
-          </a>
-    </li>
-  </ul>
-  )
+      <li>
+        <img src={require("../../assets/images/blackboard.png")} alt="" />
+        <Link to="/learning">Classes </Link>
+      </li>
+
+      <li>
+        <img src={require("../../assets/images/logout.png")} alt="" />
+        <a onClick={logout} href="#!">
+          Logout
+        </a>
+      </li>
+    </ul>
+  );
 
   return (
     <>
       {user === null && loading ? (
-<<<<<<< HEAD
-        <Spinner/>
-=======
         <Spinner />
->>>>>>> resolved some conflicts
       ) : (
         <div id="profileFirstSection" className="container-fluid">
           <div className="row">
@@ -209,14 +178,9 @@ const Profile = ({ auth: { user, loading }, editProfile, logout }) => {
               </div>
               <div className="row">
                 <div className="col-md-8">
-<<<<<<< HEAD
-                {user.role === "admin" || user.role === "instructor"? adminList : userList}
-                 
-=======
                   {user.role === "admin" || user.role === "instructor"
                     ? adminList
                     : userList}
->>>>>>> resolved some conflicts
                 </div>
               </div>
             </div>
