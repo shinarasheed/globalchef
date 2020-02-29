@@ -1,6 +1,6 @@
 import axios from "axios";
 import { setAlert } from "./alert";
-import { GET_CLASS, CLASS_ERROR, GET_CLASSBYID, CREATE_CLASS } from "./types";
+import { GET_CLASS, CLASS_ERROR, GET_CLASSBYID, CREATE_CLASS, UPDATE_CLASS } from "./types";
 
 // get all classes
 
@@ -19,7 +19,7 @@ export const getclasses = () => async dispatch => {
   }
 };
 
-
+//  get class by id 
 export const getClassBYId = id => async dispatch =>{
   try {
 
@@ -38,6 +38,7 @@ export const getClassBYId = id => async dispatch =>{
   }
 }
 
+//  create class 
 export const createClass = (formData, history)=> async dispatch => {
   try {
       const config = {
@@ -67,5 +68,39 @@ export const createClass = (formData, history)=> async dispatch => {
           type: CLASS_ERROR,
           payload: { msg: err.response.data.errors  }
         });
+  }
+}
+
+
+// update clases 
+
+export const updateClass = (formData, history,id)=> async dispatch => {
+  try {
+      const config = {
+          headers: {
+            "Content-Type": "application/json"
+          }
+        };
+      const res = await axios.patch(`/api/class/${id}`, formData, config);
+      
+    dispatch({
+      type: UPDATE_CLASS,
+      payload: res.data
+    });
+      dispatch(setAlert( " Class Updated" , "success" ));
+      history.push("/allclasses")  
+  } catch (err) {
+      const errors = err.response.data.errors;
+      if (errors) {
+          errors.forEach(error => dispatch(setAlert(error.msg, "danger")));
+        }
+
+      console.log(err);
+      
+
+      dispatch({
+        type: CLASS_ERROR,
+        payload: { msg: err.response.statusText, status: err.response.status }
+      });
   }
 }

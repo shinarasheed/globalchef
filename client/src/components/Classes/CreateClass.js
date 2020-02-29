@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import {createClass} from "../../actions/classes"
@@ -6,7 +6,6 @@ import Spinner from '../Spinner'
 import "./CreateClass.scss";
 
 const CreateClass = ({createClass, auth:{isAuthenticated, user, loading}, history}) => {
-
   
   const [formData, setFormData] = useState({
     title: "",
@@ -17,6 +16,8 @@ const CreateClass = ({createClass, auth:{isAuthenticated, user, loading}, histor
     coverImage: ""
     
   });
+
+  
 
   const [loading2, setLoading2] = useState(false);
   

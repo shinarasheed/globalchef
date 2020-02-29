@@ -26,6 +26,7 @@ import { Provider } from "react-redux";
 import store from "./store";
 import { loadUser } from "./actions/auth";
 import CreateClass from "./components/Classes/CreateClass";
+import UpdateClass from "./components/Classes/UpdateClass";
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -47,11 +48,12 @@ function App() {
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/signin" component={Signin} />
               <Route exact path="/learning" component={Learning} />
-              <Route exact path="/video" component={VideoPlayer} />
+              {/* <Route exact path="/video" component={VideoPlayer} /> */}
               <Route exact path="/allclasses" component={AllClasses} />
               <Route exact path="/users" component={Users} />
               <PrivateRoute exact path="/createclass" component={CreateClass} />
               <PrivateRoute exact path="/classes/:id" component={Classes} />
+              <PrivateRoute exact path="/updateClass/:id" component={UpdateClass} />
               <PrivateRoute exact path="/resources" component={Resources} />
               {/* <PrivateRoute exact path="/saved" component={Contact} /> */}
               {/* <PrivateRoute exact path="/enrolled" component={Enrolled} /> */}

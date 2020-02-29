@@ -102,7 +102,18 @@ const Profile = ({ auth: { user, loading }, editProfile, logout }) => {
             <Link to="">Update User Role</Link>
           </>
         ) : (
-          ""
+          null
+        )}
+      </li>
+
+      <li>
+        {user && user.role === "admin" ? (
+          <>
+            <img src={require("../../assets/images/settings.png")} alt="" />
+            <Link to="/users">Users</Link>
+          </>
+        ) : (
+          null
         )}
       </li>
 
@@ -114,20 +125,7 @@ const Profile = ({ auth: { user, loading }, editProfile, logout }) => {
         <Link to="/createclass">Create Class</Link>
       </li>
 
-      <li>
-        <img
-          src={require("../../assets/images/save-icon-silhouette.png")}
-          alt=""
-        />
-        <Link to="/users">Users</Link>
-      </li>
-      <li>
-        <img
-          src={require("../../assets/images/save-icon-silhouette.png")}
-          alt=""
-        />
-        <Link to="/allclasses">AllClasses</Link>
-      </li>
+     
 
       <li>
         {user && user.role === "admin" ? (
@@ -187,6 +185,9 @@ const Profile = ({ auth: { user, loading }, editProfile, logout }) => {
                   </p>
                   <p>
                     {user === null ? <small>loading</small> : user.location}
+                  </p>
+                  <p>
+                    {user === null ? <small>loading</small> : user.role}
                   </p>
                 </div>
               </div>

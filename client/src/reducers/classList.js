@@ -1,4 +1,4 @@
-import { GET_CLASS, CLASS_ERROR ,GET_CLASSBYID, CREATE_CLASS} from "../actions/types";
+import { GET_CLASS, CLASS_ERROR ,GET_CLASSBYID, CREATE_CLASS, UPDATE_CLASS} from "../actions/types";
 
 const initialState = {
   class1: null,
@@ -21,6 +21,7 @@ export default function(state = initialState, action) {
 
     case GET_CLASSBYID:
     case CREATE_CLASS:
+    case UPDATE_CLASS:
       return {
         ...state,
         class1: payload,

@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import LearningItem from './LearningItem'
 import Spinner from '../Spinner'
 
-const Learning = ({ getclasses, classList:{loading,classes }}) => {
+const Learning = ({ getclasses, auth:{user}, classList:{loading,classes }}) => {
   useEffect(() => {
     getclasses();
     
@@ -48,7 +48,7 @@ const Learning = ({ getclasses, classList:{loading,classes }}) => {
             <div className="row">
               {loading === false ? (
                 classes.map(lesson=>(
-                  <LearningItem key={lesson._id} lesson={lesson}/>
+                  <LearningItem key={lesson._id} lesson={lesson} user={user}/>
                 ))
               ): <h2>No Classes</h2>}
              
@@ -149,7 +149,8 @@ const Learning = ({ getclasses, classList:{loading,classes }}) => {
 };
 
 const mapStateToProps = state => ({
-  classList: state.classList
+  classList: state.classList,
+  auth: state.auth
 });
 
 export default connect(mapStateToProps, { getclasses })(Learning);
