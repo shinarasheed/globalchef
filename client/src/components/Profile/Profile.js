@@ -115,10 +115,25 @@ const Profile = ({ auth: { user, loading }, editProfile, logout }) => {
       </li>
 
       <li>
+        <img
+          src={require("../../assets/images/save-icon-silhouette.png")}
+          alt=""
+        />
+        <Link to="/users">Users</Link>
+      </li>
+      <li>
+        <img
+          src={require("../../assets/images/save-icon-silhouette.png")}
+          alt=""
+        />
+        <Link to="/allclasses">AllClasses</Link>
+      </li>
+
+      <li>
         {user && user.role === "admin" ? (
           <>
             <img src={require("../../assets/images/blackboard.png")} alt="" />
-            <Link to="">All Classes</Link>
+            <Link to="/allclasses">All Classes</Link>
           </>
         ) : (
           <>
