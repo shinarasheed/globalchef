@@ -27,6 +27,11 @@ const LearningItem = ({
           <img src={require("../../assets/images/img8.png")} alt="" />
           <span> 4.5 </span>
         </p>
+        <div>
+          <Link to="/createclass" className="update">
+            Update Class
+          </Link>
+        </div>
       </div>
     </>
   );

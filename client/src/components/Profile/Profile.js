@@ -5,7 +5,6 @@ import { editProfile, loadUser } from "../../actions/auth";
 import Spinner from "../Spinner";
 import "./Profile.css";
 import { logout } from "../../actions/auth";
-
 const Profile = ({ auth: { user, loading }, editProfile, logout }) => {
   // console.log(user);
 

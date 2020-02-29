@@ -1,0 +1,57 @@
+#usersFirstSection {
+  padding: 50px 100px;
+  div.users_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+
+    .user {
+      background-color: #ddd;
+
+      p {
+        padding: 10px;
+        margin-bottom: 0;
+
+        & span:first-child {
+          font-weight: bold;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        display: inline-block;
+        margin: 10px;
+      }
+    }
+
+    img.user_img {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+      height: auto;
+    }
+
+    a.update {
+      color: #fff;
+      background-color: blue;
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      padding: 5px;
+    }
+
+    a.delete {
+      color: #fff;
+      background-color: red;
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      padding: 5px;
+    }
+  }
+
+  h1 {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+}
