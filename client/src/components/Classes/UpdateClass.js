@@ -27,7 +27,7 @@ const UpdateClass = ({classbyId:{class1, loading}, updateClass ,getClassBYId, au
 
 
         setFormData({
-            ...formData,
+            
             title: loading || !class1.title ? " " : class1.title,
             duration: loading || !class1.duration ? " " : class1.duration,
             aboutClass: loading ||!class1.aboutClass ? " " : class1.aboutClass,
@@ -37,7 +37,7 @@ const UpdateClass = ({classbyId:{class1, loading}, updateClass ,getClassBYId, au
             
           });
         
-      }, [ loading, getClassBYId, formData]);
+      }, [ loading]);
     
   
     const [loading2, setLoading2] = useState(false);
