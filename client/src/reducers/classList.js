@@ -1,7 +1,7 @@
 import { GET_CLASS, CLASS_ERROR ,GET_CLASSBYID, CREATE_CLASS, UPDATE_CLASS} from "../actions/types";
 
 const initialState = {
-  class1: null,
+  class1: {},
   classes: [],
   loading: true,
   error: {}

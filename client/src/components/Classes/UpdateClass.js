@@ -17,9 +17,11 @@ const UpdateClass = ({classbyId:{class1, loading}, updateClass ,getClassBYId, au
       coverImage: ""
       
     });
+ 
+    console.log(class1);
+    const {title, duration, aboutClass, resources, video, coverImage}= formData
 
-    // console.log(class1);
-    
+    const [loading4, setLoading4] = useState(true);
   
     useEffect(() => {
 
@@ -27,7 +29,7 @@ const UpdateClass = ({classbyId:{class1, loading}, updateClass ,getClassBYId, au
 
 
         setFormData({
-            
+           
             title: loading || !class1.title ? " " : class1.title,
             duration: loading || !class1.duration ? " " : class1.duration,
             aboutClass: loading ||!class1.aboutClass ? " " : class1.aboutClass,
@@ -36,14 +38,16 @@ const UpdateClass = ({classbyId:{class1, loading}, updateClass ,getClassBYId, au
             // coverImage: loading || !class1.coverImage ? "" : class1.coverImage,
             
           });
+
+          setLoading4(false)
         
-      }, [ loading]);
+      }, [getClassBYId, loading, match.params.id]);
     
   
     const [loading2, setLoading2] = useState(false);
     
   
-    const {title, duration, aboutClass, resources, video, coverImage}= formData
+    
   
     const onChange = e =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -55,9 +59,9 @@ const UpdateClass = ({classbyId:{class1, loading}, updateClass ,getClassBYId, au
     
     };
   
-    // if (loading && class1 === null) {
-    //   return <Spinner/>;
-    // }
+    if (loading4) {
+      return <Spinner/>;
+    }
   
     const fileUpload = async e => {
       try {
@@ -130,7 +134,7 @@ const UpdateClass = ({classbyId:{class1, loading}, updateClass ,getClassBYId, au
       <>
   
       { 
-        ( loading || class1 === null) ? (
+        ( loading || !class1) ? (
           <Spinner/>
             ): (
                 <div id="createClass">
@@ -145,7 +149,6 @@ const UpdateClass = ({classbyId:{class1, loading}, updateClass ,getClassBYId, au
                             className="form-control"
                             name="title"
                             value={title}
-                            required
                             placeholder="Enter the title for your class"
                             onChange={e => onChange(e)}
                           />
@@ -159,7 +162,7 @@ const UpdateClass = ({classbyId:{class1, loading}, updateClass ,getClassBYId, au
                             className="form-control"
                             placeholder="Enter the duration for your class"
                             onChange={e => onChange(e)}
-                            required
+                            
                           />
                         </div>
                         <div>
@@ -186,7 +189,7 @@ const UpdateClass = ({classbyId:{class1, loading}, updateClass ,getClassBYId, au
                             id="resources"
                             className="form-control"
                             onChange={fileUpload}
-                            required
+                            
                           />
                         </div>
                         <div>
@@ -197,7 +200,7 @@ const UpdateClass = ({classbyId:{class1, loading}, updateClass ,getClassBYId, au
                             id="video"
                             className="form-control"
                             onChange={videoUpload}
-                            required
+                            ed
                             
                           />
                         </div>
@@ -210,7 +213,6 @@ const UpdateClass = ({classbyId:{class1, loading}, updateClass ,getClassBYId, au
                             name="coverImage"
                             id="coverimage"
                             className="form-control"
-                            required
                             onChange={fileUpload}
                           />
                         </div>
