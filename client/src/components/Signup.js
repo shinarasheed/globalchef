@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { register } from "../actions/auth";
 
 const Signup = ({ register, isAuthenticated }) => {
+  const useEffect = () => {
+    window.scrollTo(0, 0);
+  };
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -23,10 +26,9 @@ const Signup = ({ register, isAuthenticated }) => {
     register({ name, email, password, newsLetters });
   };
 
-  
- if(isAuthenticated){
-  return <Redirect to="/"/>
-}
+  if (isAuthenticated) {
+    return <Redirect to="/" />;
+  }
   return (
     <>
       <div id="signupFirstSection" className="container-fluid">
@@ -34,7 +36,7 @@ const Signup = ({ register, isAuthenticated }) => {
           <div className="col-md-3">
             <div className="clear">
               <span>Sign Up and start Learning</span>
-              <Link to="chef">
+              <Link to="/signup">
                 <img
                   src={require("../assets/images/cancel-button.png")}
                   alt=""

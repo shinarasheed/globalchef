@@ -8,7 +8,8 @@ const LearningItem = ({
     duration,
     coverImage,
     user: { name }
-  }, user
+  },
+  user
 }) => {
   return (
     <>
@@ -28,11 +29,13 @@ const LearningItem = ({
           <span> 4.5 </span>
         </p>
         <div>
-
-          {user &&  user.role === 'admin' ? (<Link to={`/updateClass/${_id}`} className="update">
-            Update Class
-          </Link>): ('')}
-          
+          {user && user.role === "admin" ? (
+            <Link to={`/updateClass/${_id}`} className="update">
+              Update Class
+            </Link>
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </>

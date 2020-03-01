@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-
 const Landingpage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <>
       <div id="homeFirstSection" className="container-fluid">
@@ -11,7 +13,7 @@ const Landingpage = () => {
             <h3>
               Get Unlimited access to the <br /> world of food
             </h3>
-            <Link to="cooking">Get Started</Link>
+            <Link to="/signup">Get Started</Link>
           </div>
         </div>
       </div>
@@ -49,7 +51,6 @@ const Landingpage = () => {
             <div className="row row-1">
               <div className="col-md-12">
                 <div>
-                  <h1>Top Classes</h1>
                   <p>
                     Your professional development has just gotten easier,
                     affordable and exciting with our online courses. They are
@@ -137,7 +138,7 @@ const Landingpage = () => {
                 </p>
               </div>
             </div>
-            <Link to="classes">Explore all Classes</Link>
+            <Link to="/learning">Explore all Classes</Link>
           </div>
         </div>
       </div>
@@ -361,48 +362,6 @@ const Landingpage = () => {
       </div>
       <div id="homeSixthSection" className="container-fluid">
         <div className="row parent_row">
-          {/* <div className="col-md-4 form_div">
-            <div className="row">
-              <div className="col-md-6">
-                <p>Get In Touch</p>
-                <h4>Contact Us</h4>
-              </div>
-            </div>
-            <form>
-              <div className="row row_2">
-                <div className="col-md-6">
-                  <input type="text" placeholder="Phone Number" />
-                  <img src={require("../../assets/images/number.png")} alt="" />
-                </div>
-                <div className="col-md-6">
-                  <input type="text" placeholder="Email" />
-                  <img src={require("../../assets/images/mail.png")} alt="" />
-                </div>
-              </div>
-              <div className="row row_2">
-                <div className="col-md-6">
-                  <input type="text" placeholder="Full Name" />
-                  <img src={require("../../assets/images/name.png")} alt="" />
-                </div>
-                <div className="col-md-6">
-                  <input type="text" placeholder="Topic" />
-                  <img src={require("../../assets/images/topic.png")} alt="" />
-                </div>
-              </div>
-              <div className="row ">
-                <div className="col-md-12 row_2">
-                  <textarea cols="30" rows="3">
-                    Message
-                  </textarea>
-                  <img
-                    src={require("../../assets/images/message.png")}
-                    alt=""
-                  />
-                </div>
-              </div>
-              <button type="submit">Send</button>
-            </form>
-          </div> */}
           <div className="col-md-6 image_div">
             <img
               src={require("../../assets/images/contactimg.png")}

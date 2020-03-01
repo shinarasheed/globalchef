@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { login } from "../actions/auth";
 
 const Signin = ({ login, isAuthenticated }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   const [formData, setFormData] = useState({
     email: "",
     password: ""
@@ -20,8 +23,8 @@ const Signin = ({ login, isAuthenticated }) => {
     login(email, password);
   };
 
-  if(isAuthenticated){
-    return <Redirect to="/"/>
+  if (isAuthenticated) {
+    return <Redirect to="/" />;
   }
   return (
     <>
@@ -30,7 +33,7 @@ const Signin = ({ login, isAuthenticated }) => {
           <div className="col-md-3">
             <div className="clear">
               <span>Welcome Back!</span>
-              <Link to="chef">
+              <Link to="/signin">
                 <img
                   src={require("../assets/images/cancel-button.png")}
                   alt=""
