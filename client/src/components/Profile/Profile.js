@@ -5,6 +5,9 @@ import { editProfile, loadUser } from "../../actions/auth";
 import Spinner from "../Spinner";
 import "./Profile.css";
 import { logout } from "../../actions/auth";
+import { FaUser } from "react-icons/fa";
+import { MdCreate } from "react-icons/md";
+
 const Profile = ({ auth: { user, loading }, editProfile, logout }) => {
   // console.log(user);
 
@@ -101,31 +104,22 @@ const Profile = ({ auth: { user, loading }, editProfile, logout }) => {
             <img src={require("../../assets/images/settings.png")} alt="" />
             <Link to="">Update User Role</Link>
           </>
-        ) : (
-          null
-        )}
+        ) : null}
       </li>
 
       <li>
         {user && user.role === "admin" ? (
           <>
-            <img src={require("../../assets/images/settings.png")} alt="" />
+            <FaUser />
             <Link to="/users">Users</Link>
           </>
-        ) : (
-          null
-        )}
+        ) : null}
       </li>
 
       <li>
-        <img
-          src={require("../../assets/images/save-icon-silhouette.png")}
-          alt=""
-        />
+        <MdCreate />
         <Link to="/createclass">Create Class</Link>
       </li>
-
-     
 
       <li>
         {user && user.role === "admin" ? (
@@ -186,9 +180,7 @@ const Profile = ({ auth: { user, loading }, editProfile, logout }) => {
                   <p>
                     {user === null ? <small>loading</small> : user.location}
                   </p>
-                  <p>
-                    {user === null ? <small>loading</small> : user.role}
-                  </p>
+                  <p>{user === null ? <small>loading</small> : user.role}</p>
                 </div>
               </div>
               <div className="row">
@@ -215,10 +207,6 @@ const Profile = ({ auth: { user, loading }, editProfile, logout }) => {
                           onChange={e => onChange(e)}
                         />
                       </div>
-                      {/* <div className="col">
-                        <label htmlFor="LastName">Last Name</label>
-                        <input type="text" className="form-control" />
-                      </div> */}
                     </div>
                     <div className="mb-3">
                       <label htmlFor="bio">About me</label>
@@ -271,15 +259,6 @@ const Profile = ({ auth: { user, loading }, editProfile, logout }) => {
                           <option value="Accra, Ghana">Accra, Ghana</option>
                         </select>
                       </div>
-                      {/* <div className="col">
-                        <label htmlFor="password">Password</label>
-                        <input
-                          type="password"
-                          name="password"
-                          id=""
-                          className="form-control"
-                        />
-                      </div> */}
                     </div>
 
                     <div className="row">

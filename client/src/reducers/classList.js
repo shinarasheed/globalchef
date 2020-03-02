@@ -1,7 +1,13 @@
-import { GET_CLASS, CLASS_ERROR ,GET_CLASSBYID, CREATE_CLASS, UPDATE_CLASS} from "../actions/types";
+import {
+  GET_CLASS,
+  CLASS_ERROR,
+  GET_CLASSBYID,
+  CREATE_CLASS,
+  UPDATE_CLASS
+} from "../actions/types";
 
 const initialState = {
-  class1: {},
+  class1: null,
   classes: [],
   loading: true,
   error: {}
@@ -12,7 +18,6 @@ export default function(state = initialState, action) {
 
   switch (type) {
     case GET_CLASS:
-    
       return {
         ...state,
         classes: payload,
@@ -26,14 +31,16 @@ export default function(state = initialState, action) {
         ...state,
         class1: payload,
         loading: false
-      }
+      };
 
     case CLASS_ERROR:
-      return{
+      return {
         ...state,
-        error:payload,
-        loading: false
-      }
+        error: payload,
+        loading: false,
+        class1: null,
+  classes: null,
+      };
     default:
       return state;
   }

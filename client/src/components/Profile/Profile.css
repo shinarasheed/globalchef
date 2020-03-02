@@ -1,11 +1,17 @@
 @supports (-moz-appearance: none) {
   select {
     -moz-appearance: none !important;
-    background: #fff
-      url("data:image/gif;base64,R0lGODlhBgAGAKEDAFVVVX9/f9TU1CgmNyH5BAEKAAMALAAAAAAGAAYAAAIODA4hCDKWxlhNvmCnGwUAOw==")
-      right center no-repeat !important;
+    background: #fff url("data:image/gif;base64,R0lGODlhBgAGAKEDAFVVVX9/f9TU1CgmNyH5BAEKAAMALAAAAAAGAAYAAAIODA4hCDKWxlhNvmCnGwUAOw==") right center no-repeat !important;
     background-position: calc(100% - 5px) center !important;
   }
+}
+
+textarea {
+  resize: none;
+}
+
+input[type="file"] {
+  padding-bottom: 20px;
 }
 
 #profileFirstSection {
@@ -46,13 +52,11 @@
   padding-left: 10px;
 }
 
-#profileFirstSection .col-md-3 ul li img {
-  padding-right: 20px;
-}
-
 #profileFirstSection .col-md-3 ul li a {
   color: #000;
   text-decoration: none;
+  display: inline-block;
+  margin-left: 15px;
 }
 
 #profileFirstSection .col-md-9 .row.parent {
