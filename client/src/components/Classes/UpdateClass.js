@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { updateClass, getClassBYId} from "../../actions/classes"
 import Spinner from '../Spinner'
@@ -200,7 +200,7 @@ const UpdateClass = ({classbyId:{class1, loading}, updateClass ,getClassBYId, au
                             id="video"
                             className="form-control"
                             onChange={videoUpload}
-                            ed
+                            
                             
                           />
                         </div>
@@ -236,5 +236,5 @@ const UpdateClass = ({classbyId:{class1, loading}, updateClass ,getClassBYId, au
     classbyId: state.classList
   });
   
-  export default connect(mapStateToProps, { updateClass, getClassBYId }) (UpdateClass);
+  export default connect(mapStateToProps, { updateClass, getClassBYId }) (withRouter (UpdateClass));
   

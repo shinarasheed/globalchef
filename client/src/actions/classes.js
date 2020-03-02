@@ -88,7 +88,8 @@ export const updateClass = (formData, history,id)=> async dispatch => {
       payload: res.data
     });
       dispatch(setAlert( " Class Updated" , "success" ));
-      history.push("/allclasses")  
+      history.push("/learning")  
+      
   } catch (err) {
       const errors = err.response.data.errors;
       if (errors) {
